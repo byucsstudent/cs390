@@ -35,6 +35,8 @@ Upon successful completion of this course, you will be able to:
 
 ## Course Modules
 
+The course is divided into modules that cover the key concepts of Agentic Programming. Feel free to skip around in the content according to your current understanding and interest. The different module topics include interactions that help you to determine your master and enhance your learning.
+
 *   **Foundations of Agentic Programming:** This module introduces the core concepts of agentic programming, contrasting it with traditional paradigms and exploring the fundamental principles that enable autonomous, goal-driven systems powered by Large Language Models (LLMs).
 *   **LLMs as Reasoning Engines & Prompt Engineering Fundamentals:** This module delves into how Large Language Models function as the 'brain' of an agent, focusing on the crucial role of prompt engineering in guiding their reasoning, decision-making, and output generation.
 *   **Tools, Actions, and the Model Context Protocol:** This module focuses on how agents extend their capabilities beyond pure language generation by interacting with external tools. It covers the Model Context Protocol and the design principles for integrating various functionalities.
