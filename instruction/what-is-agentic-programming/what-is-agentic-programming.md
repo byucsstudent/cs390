@@ -22,7 +22,7 @@ This shift moves us from merely automating tasks to automating *problem-solving*
 
 ## The Core Agentic Loop: Plan, Act, Observe
 
-![agenticProgramming.jpg](agenticProgramming.jpg)
+![agenticProgramming.jpg](agenticProgrammingMd.jpg)
 
 The fundamental architecture of an agentic system revolves around an iterative cycle known as the Plan, Act, Observe (PAO) loop. This loop mirrors how humans approach complex tasks:
 
@@ -53,6 +53,8 @@ If the initial web search yields too many irrelevant results, the agent might ob
 ## Key Pillars of Agentic Programming
 
 Several core technologies and techniques underpin the effectiveness of agentic programming:
+
+![agenticPillars.jpg](agenticPillarsMd.jpg)
 
 ### Large Language Models (LLMs) as Reasoning Engines
 LLMs are the brain of any agentic system. Their ability to understand natural language, generate coherent text, and perform complex reasoning tasks (like inference, summarization, and task decomposition) makes them ideal for:
