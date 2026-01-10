@@ -24,7 +24,7 @@ Upon successful completion of this course, you will be able to:
 
 
 ```masteryls
-{"id":"e1055f7d-a4c4-4cf4-8a28-7b65461307db", "title":"How well do you currently understand the course outcomes?", "type":"survey", "body":"fdsfsdf" }
+{"id":"e1055f7d-a4c4-4cf4-8a28-7b65461307db", "title":"How well do you currently understand the course outcomes?", "type":"survey", "body":"Help us understand where you currently are with what this course is striving to teach. At the end of the course we will ask you the same question. This will help us evolve the course to meet future student's needs." }
 - [ ] Not familiar
 - [ ] Somewhat familiar
 - [ ] Familiar
