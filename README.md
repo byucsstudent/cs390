@@ -21,6 +21,18 @@ Upon successful completion of this course, you will be able to:
 *   **Apply** advanced design patterns, testing methodologies, and deployment strategies for robust and production-ready agentic systems.
 *   **Develop and evaluate** a comprehensive agentic system to solve a real-world problem, integrating all core components learned throughout the course.
 
+
+
+```masteryls
+{"id":"e1055f7d-a4c4-4cf4-8a28-7b65461307db", "title":"How well do you currently understand the course outcomes?", "type":"survey", "body":"fdsfsdf" }
+- [ ] Not familiar
+- [ ] Somewhat familiar
+- [ ] Familiar
+- [ ] Very familiar
+- [ ] Mastered
+```
+
+
 ## Course Modules
 
 *   **Foundations of Agentic Programming:** This module introduces the core concepts of agentic programming, contrasting it with traditional paradigms and exploring the fundamental principles that enable autonomous, goal-driven systems powered by Large Language Models (LLMs).
@@ -33,3 +45,4 @@ Upon successful completion of this course, you will be able to:
 *   **Capstone Project: Building a Comprehensive Agentic System:** This capstone module provides a practical opportunity to apply all learned concepts by designing, implementing, and evaluating a complete agentic system to solve a real-world problem, integrating LLMs, tools, memory, and an orchestration framework.
 
 Are you ready to build the next generation of intelligent software? Dive in and start your journey into Agentic Programming today – the future awaits!
+
