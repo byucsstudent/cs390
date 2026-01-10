@@ -1,6 +1,7 @@
 # What is Agentic Programming?
 
 Change 1
+Addition 2
 
 Agentic programming represents a profound shift in how we design and build software, moving beyond rigid, pre-scripted instructions to create autonomous, goal-oriented systems. At its heart, agentic programming leverages the reasoning capabilities of Large Language Models (LLMs) to enable software agents to understand high-level objectives, break them down into manageable tasks, execute actions, and learn from observations, all while striving to achieve a defined goal. This paradigm empowers developers to build intelligent applications that can adapt, self-correct, and even collaborate, mirroring aspects of human problem-solving in complex environments. It's about orchestrating intelligence, memory, and tool use to solve problems that were previously intractable for traditional deterministic code.
 
