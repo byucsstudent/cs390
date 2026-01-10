@@ -11,7 +11,8 @@
           "path": "README.md",
           "id": "debb73f0-88b3-4b44-bd6b-01a63ba90675",
           "state": "published",
-          "description": "Course introduction, objectives, and a high-level overview of agentic programming."
+          "description": "Course introduction, objectives, and a high-level overview of agentic programming.",
+          "commit": "63dc5533f7810515777ab6f69572bd71e480845b"
         },
         {
           "title": "What is Agentic Programming?",
