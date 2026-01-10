@@ -111,7 +111,7 @@
           "type": "instruction",
           "path": "instruction/understanding-large-language-models/understanding-large-language-models.md",
           "id": "219604fc-7fda-4e63-858b-cfa443d4147a",
-          "state": "stub",
+          "state": "published",
           "description": "Exploring the architecture and capabilities of LLMs that make them suitable for agentic tasks."
         },
         {
