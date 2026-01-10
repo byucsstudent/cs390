@@ -14,6 +14,12 @@ Agentic programming introduces a new paradigm:
 
 This shift moves us from merely automating tasks to automating *problem-solving*, enabling software to tackle more complex, open-ended challenges.
 
+
+```masteryls
+{"id":"d35fd118-2ab1-44f7-bac3-502e426a335a", "title":"What is agentic programming", "type":"teaching", "body":"Can you explain to me how agentic programming differs from traditional programming?" }
+```
+
+
 ### The Core Agentic Loop: Plan, Act, Observe
 
 The fundamental architecture of an agentic system revolves around an iterative cycle known as the Plan, Act, Observe (PAO) loop. This loop mirrors how humans approach complex tasks:
