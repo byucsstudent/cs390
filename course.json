@@ -1,0 +1,822 @@
+{
+  "title": "Agentic Programming",
+  "description": "Agentic programming shifts software from rigid scripts to autonomous systems that use LLMs as reasoning engines to achieve high-level goals. The core architecture centers on an iterative loop of Planning (decomposing tasks), Action (using tools via the Model Context Protocol), and Observation (evaluating results). It leverages Prompt Engineering—specifically techniques like Chain-of-Thought and ReAct—to guide the model’s logic, while Retrieval-Augmented Generation (RAG) provides the necessary external knowledge and long-term memory. By orchestrating these components through frameworks like LangGraph or CrewAI, developers build self-correcting workflows where specialized agents collaborate, execute code, and refine their own outputs until a target objective is met.",
+  "modules": [
+    {
+      "title": "Foundations of Agentic Programming",
+      "description": "This module introduces the core concepts of agentic programming, contrasting it with traditional paradigms and exploring the fundamental principles that enable autonomous, goal-driven systems powered by Large Language Models (LLMs).",
+      "topics": [
+        {
+          "title": "Overview",
+          "description": "Course introduction, objectives, and a high-level overview of agentic programming.",
+          "path": "README.md",
+          "type": "instruction",
+          "state": "published",
+          "id": "debb73f0-88b3-4b44-bd6b-01a63ba90675"
+        },
+        {
+          "title": "What is Agentic Programming?",
+          "description": "Defining agentic programming and its role in modern software development.",
+          "path": "instruction/what-is-agentic-programming/what-is-agentic-programming.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "484c9f60-bafb-4ffb-9413-cbc4d504d32c"
+        },
+        {
+          "title": "Traditional Programming vs. Agentic Paradigms",
+          "description": "Comparing the execution flow and design philosophies of traditional and agentic systems.",
+          "path": "instruction/traditional-programming-vs-agentic-paradigms/traditional-programming-vs-agentic-paradigms.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "cdbbadc0-fbb7-460f-942d-64b58bd83553"
+        },
+        {
+          "title": "The Rise of LLMs and Agentic Systems",
+          "description": "Understanding how the capabilities of LLMs enable the development of autonomous agents.",
+          "path": "instruction/the-rise-of-llms-and-agentic-systems/the-rise-of-llms-and-agentic-systems.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "544f7800-2586-40ed-9702-68e678ee419a"
+        },
+        {
+          "title": "Core Concepts: Agents, Goals, and Autonomy",
+          "description": "Exploring the fundamental components of an agentic system and the concept of autonomy.",
+          "path": "instruction/core-concepts-agents-goals-and-autonomy/core-concepts-agents-goals-and-autonomy.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "342825df-a0ef-4ff4-b775-d29a5971b729"
+        },
+        {
+          "title": "The Iterative Loop: Plan, Act, Observe",
+          "description": "Deep dive into the foundational iterative cycle that drives agent behavior.",
+          "path": "instruction/the-iterative-loop-plan-act-observe/the-iterative-loop-plan-act-observe.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "d43ef285-0d95-497f-be7c-cd1e175f3b4f"
+        },
+        {
+          "title": "Why Agentic Programming Matters",
+          "description": "Discussing the benefits, challenges, and transformational potential of agentic systems.",
+          "path": "instruction/why-agentic-programming-matters/why-agentic-programming-matters.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "4c63ccd0-442a-491d-b4d3-0b90461a8e77"
+        },
+        {
+          "title": "Use Cases and Applications",
+          "description": "Reviewing diverse real-world applications where agentic programming excels.",
+          "path": "instruction/use-cases-and-applications/use-cases-and-applications.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "73919b08-b95e-47fb-88e9-39c23b44ac94"
+        },
+        {
+          "title": "Ethical Considerations in Agentic Systems",
+          "description": "Addressing the ethical implications and responsibilities in developing autonomous agents.",
+          "path": "instruction/ethical-considerations-in-agentic-systems/ethical-considerations-in-agentic-systems.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "3003dced-e0e7-4445-85e8-ee1a6faa9396"
+        },
+        {
+          "title": "Setting Up Your Development Environment",
+          "description": "Guidance on configuring the necessary tools and libraries for agentic development.",
+          "path": "instruction/setting-up-your-development-environment/setting-up-your-development-environment.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "73d09578-adc0-48ac-a5b9-ef72169a8e13"
+        },
+        {
+          "title": "Introduction to Python for Agentic Systems",
+          "description": "A quick refresher on Python features essential for building agentic applications.",
+          "path": "instruction/introduction-to-python-for-agentic-systems/introduction-to-python-for-agentic-systems.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "54e3b933-fac0-41c1-8e70-86787f17b35a"
+        },
+        {
+          "title": "Basic LLM Interaction",
+          "description": "Hands-on practice with basic API calls to interact with large language models.",
+          "path": "instruction/basic-llm-interaction/basic-llm-interaction.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "4f4ed9ee-c976-467a-8eed-b753f0a033c5"
+        }
+      ]
+    },
+    {
+      "title": "LLMs as Reasoning Engines & Prompt Engineering Fundamentals",
+      "description": "This module delves into how Large Language Models function as the 'brain' of an agent, focusing on the crucial role of prompt engineering in guiding their reasoning, decision-making, and output generation.",
+      "topics": [
+        {
+          "title": "Understanding Large Language Models",
+          "description": "Exploring the architecture and capabilities of LLMs that make them suitable for agentic tasks.",
+          "path": "instruction/understanding-large-language-models/understanding-large-language-models.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "219604fc-7fda-4e63-858b-cfa443d4147a"
+        },
+        {
+          "title": "The Role of LLMs in Agentic Systems",
+          "description": "How LLMs serve as the core reasoning and decision-making component for agents.",
+          "path": "instruction/the-role-of-llms-in-agentic-systems/the-role-of-llms-in-agentic-systems.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "86b0aed2-15a3-4b3a-b26a-08537189b9eb"
+        },
+        {
+          "title": "Prompt Engineering: Guiding LLM Behavior",
+          "description": "Introduction to the art and science of crafting effective prompts to steer LLM responses.",
+          "path": "instruction/prompt-engineering-guiding-llm-behavior/prompt-engineering-guiding-llm-behavior.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "fb8db194-b28d-4e8e-b3a0-e1e4569d0bad"
+        },
+        {
+          "title": "Basic Prompting Techniques",
+          "description": "Fundamental methods for constructing prompts, including clear instructions and role-playing.",
+          "path": "instruction/basic-prompting-techniques/basic-prompting-techniques.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "fa75eec7-016b-4c4f-822b-b3f4bd803e2a"
+        },
+        {
+          "title": "Few-Shot Prompting",
+          "description": "Leveraging examples within prompts to teach LLMs new tasks or output formats.",
+          "path": "instruction/few-shot-prompting/few-shot-prompting.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "2f91919c-e746-4d16-b401-db8fe3a81dea"
+        },
+        {
+          "title": "Zero-Shot Prompting",
+          "description": "Techniques for getting LLMs to perform tasks without explicit examples.",
+          "path": "instruction/zero-shot-prompting/zero-shot-prompting.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "ac1fc78a-8bf3-49ec-997f-0037d8876e40"
+        },
+        {
+          "title": "Temperature and Top-P: Controlling Creativity",
+          "description": "Understanding parameters that influence the randomness and determinism of LLM outputs.",
+          "path": "instruction/temperature-and-top-p-controlling-creativity/temperature-and-top-p-controlling-creativity.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "a5fdcf9f-0afe-4ef7-a347-e15314115d57"
+        },
+        {
+          "title": "System Prompts vs. User Prompts",
+          "description": "Differentiating between instructions for the LLM's persona and direct user queries.",
+          "path": "instruction/system-prompts-vs-user-prompts/system-prompts-vs-user-prompts.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "af4f8fcf-87f2-4a03-8563-66def0902a96"
+        },
+        {
+          "title": "Designing Effective Prompts for Agents",
+          "description": "Strategies for creating prompts that enable agents to perform complex reasoning and actions.",
+          "path": "instruction/designing-effective-prompts-for-agents/designing-effective-prompts-for-agents.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "8ef40174-0343-4664-a38e-8fad545fd7b6"
+        },
+        {
+          "title": "Prompt Chaining and Sequential Prompts",
+          "description": "Building multi-step reasoning by linking prompts together.",
+          "path": "instruction/prompt-chaining-and-sequential-prompts/prompt-chaining-and-sequential-prompts.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "ae9eec31-b4de-4b46-9b0f-5681a0dd2a0e"
+        },
+        {
+          "title": "Evaluating Prompt Effectiveness",
+          "description": "Methods and metrics for testing and refining prompt designs.",
+          "path": "instruction/evaluating-prompt-effectiveness/evaluating-prompt-effectiveness.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "acbc2394-079a-4d9d-827d-425dbad4f139"
+        },
+        {
+          "title": "Prompt Engineering Best Practices",
+          "description": "A summary of guidelines for developing robust and reliable prompts for agentic systems.",
+          "path": "instruction/prompt-engineering-best-practices/prompt-engineering-best-practices.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "83e8277d-94f5-427f-b7a9-1636e6f6f475"
+        }
+      ]
+    },
+    {
+      "title": "Tools, Actions, and the Model Context Protocol",
+      "description": "This module focuses on how agents extend their capabilities beyond pure language generation by interacting with external tools. It covers the Model Context Protocol and the design principles for integrating various functionalities.",
+      "topics": [
+        {
+          "title": "Introduction to Tools in Agentic Systems",
+          "description": "Understanding what tools are and why they are essential for agent functionality.",
+          "path": "instruction/introduction-to-tools-in-agentic-systems/introduction-to-tools-in-agentic-systems.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "39d267b6-e002-4add-ac60-199d8f55b312"
+        },
+        {
+          "title": "What are Tools and Why are They Important?",
+          "description": "Exploring the concept of tools as functions that agents can invoke to perform specific actions.",
+          "path": "instruction/what-are-tools-and-why-are-they-important/what-are-tools-and-why-are-they-important.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "b7ad9e6a-5fa7-4a64-a0ba-f70974195430"
+        },
+        {
+          "title": "Defining Tool Functions",
+          "description": "Practical guidance on how to structure and implement functions that agents can call.",
+          "path": "instruction/defining-tool-functions/defining-tool-functions.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "8d743cdf-90ab-4b12-bd90-93a32fba8359"
+        },
+        {
+          "title": "The Model Context Protocol: How LLMs Use Tools",
+          "description": "Understanding the standard interface and communication mechanism for LLMs to interact with tools.",
+          "path": "instruction/the-model-context-protocol-how-llms-use-tools/the-model-context-protocol-how-llms-use-tools.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "d509732f-8953-4113-a53b-03da26fc3481"
+        },
+        {
+          "title": "Tool Descriptors and Schemas",
+          "description": "Learning to define tool capabilities and required parameters using structured formats.",
+          "path": "instruction/tool-descriptors-and-schemas/tool-descriptors-and-schemas.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "f374de4a-72ae-4152-b99a-ff88cc18a536"
+        },
+        {
+          "title": "Integrating External APIs as Tools",
+          "description": "Connecting agents to web services and third-party APIs through custom tools.",
+          "path": "instruction/integrating-external-apis-as-tools/integrating-external-apis-as-tools.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "352a28fc-4a0f-47d2-813c-bb9561d3237d"
+        },
+        {
+          "title": "Creating Custom Tools for Specific Tasks",
+          "description": "Developing bespoke tools to handle unique requirements not met by existing services.",
+          "path": "instruction/creating-custom-tools-for-specific-tasks/creating-custom-tools-for-specific-tasks.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "6a9d5d4c-2072-4764-850f-68b01a5b3d03"
+        },
+        {
+          "title": "Tool Selection and Usage Strategies",
+          "description": "How agents decide which tool to use and when, based on their current goal and context.",
+          "path": "instruction/tool-selection-and-usage-strategies/tool-selection-and-usage-strategies.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "961c868b-b559-475a-9df2-f82f4be0de39"
+        },
+        {
+          "title": "Handling Tool Outputs and Errors",
+          "description": "Strategies for processing results from tool executions and managing potential failures.",
+          "path": "instruction/handling-tool-outputs-and-errors/handling-tool-outputs-and-errors.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "4b9bdeda-cfc5-4ee5-b7dd-3578dd63fe70"
+        },
+        {
+          "title": "Tool Orchestration in Workflows",
+          "description": "Designing sequences of tool calls to achieve complex objectives.",
+          "path": "instruction/tool-orchestration-in-workflows/tool-orchestration-in-workflows.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "4fd12234-d61b-4d73-af4e-a5c8705440fa"
+        },
+        {
+          "title": "Security Considerations for Tools",
+          "description": "Best practices for securing agentic systems that interact with external services.",
+          "path": "instruction/security-considerations-for-tools/security-considerations-for-tools.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "248b8445-e6df-41e7-a2f4-dc4d60424ddb"
+        },
+        {
+          "title": "Building a Simple Agent with a Single Tool",
+          "description": "A practical exercise to implement an agent capable of using one external tool.",
+          "path": "instruction/building-a-simple-agent-with-a-single-tool/building-a-simple-agent-with-a-single-tool.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "1be949e2-c4f2-4e13-b865-38cd1132b471"
+        }
+      ]
+    },
+    {
+      "title": "Memory, State, and Retrieval-Augmented Generation (RAG)",
+      "description": "This module explores how agents maintain state and leverage external knowledge through memory systems and Retrieval-Augmented Generation (RAG) to overcome the limitations of their immediate context window.",
+      "topics": [
+        {
+          "title": "The Challenge of Stateless LLMs",
+          "description": "Understanding why LLMs, by default, lack memory and how this impacts agents.",
+          "path": "instruction/the-challenge-of-stateless-llms/the-challenge-of-stateless-llms.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "4efeb689-7f77-4e01-8232-383a28be4fe6"
+        },
+        {
+          "title": "Introduction to Agent Memory",
+          "description": "Overview of different types of memory an agent can possess: short-term and long-term.",
+          "path": "instruction/introduction-to-agent-memory/introduction-to-agent-memory.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "0c281bb0-5ec9-4d79-99e4-00c66f8b9c9e"
+        },
+        {
+          "title": "Short-Term Memory: Context Window Management",
+          "description": "Techniques for managing the limited context window of an LLM to retain recent interactions.",
+          "path": "instruction/short-term-memory-context-window-management/short-term-memory-context-window-management.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "0d675770-bb68-43bf-b66f-4559e055993c"
+        },
+        {
+          "title": "Long-Term Memory: Vector Databases",
+          "description": "Introduction to vector databases as a persistent storage for agent knowledge.",
+          "path": "instruction/long-term-memory-vector-databases/long-term-memory-vector-databases.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "d3be3c7a-ea6d-4c5d-96a9-ac4c4cada960"
+        },
+        {
+          "title": "Understanding Embeddings and Vector Search",
+          "description": "How text is converted into numerical vectors and efficiently searched for semantic similarity.",
+          "path": "instruction/understanding-embeddings-and-vector-search/understanding-embeddings-and-vector-search.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "ddd8c087-3b90-4385-8def-19cc8fc73414"
+        },
+        {
+          "title": "Retrieval-Augmented Generation (RAG) Explained",
+          "description": "A detailed breakdown of the RAG paradigm: retrieve relevant info, then generate a response.",
+          "path": "instruction/retrieval-augmented-generation-rag-explained/retrieval-augmented-generation-rag-explained.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "404d5e0f-78a9-4164-b1c0-a871b090d555"
+        },
+        {
+          "title": "Building a Basic RAG System",
+          "description": "Step-by-step guide to constructing a simple RAG pipeline.",
+          "path": "instruction/building-a-basic-rag-system/building-a-basic-rag-system.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "ebca43cc-4e4a-4c14-be88-906b97ff14cf"
+        },
+        {
+          "title": "Chunking Strategies for Documents",
+          "description": "Methods for dividing large documents into manageable pieces for effective retrieval.",
+          "path": "instruction/chunking-strategies-for-documents/chunking-strategies-for-documents.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "2063a641-84fd-4630-939d-c5fe7ca626e2"
+        },
+        {
+          "title": "Indexing and Storing Information",
+          "description": "Best practices for populating and maintaining vector databases.",
+          "path": "instruction/indexing-and-storing-information/indexing-and-storing-information.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "9dd38f9f-0833-486d-9893-6036a5a44f8d"
+        },
+        {
+          "title": "Querying and Retrieval Techniques",
+          "description": "Optimizing queries to retrieve the most relevant information from memory.",
+          "path": "instruction/querying-and-retrieval-techniques/querying-and-retrieval-techniques.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "f972a9a6-c2ca-44ee-8247-07a1a321025b"
+        },
+        {
+          "title": "Advanced RAG Patterns",
+          "description": "Exploring sophisticated RAG architectures, such as recursive or self-reflecting retrieval.",
+          "path": "instruction/advanced-rag-patterns/advanced-rag-patterns.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "e96e4318-53cb-4be8-881c-2232923a5788"
+        },
+        {
+          "title": "Evaluating RAG Performance",
+          "description": "Metrics and methodologies for assessing the effectiveness of a RAG system.",
+          "path": "instruction/evaluating-rag-performance/evaluating-rag-performance.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "38ce93be-646b-4f15-89bc-3c17729502cf"
+        }
+      ]
+    },
+    {
+      "title": "Agent Architectures and Orchestration",
+      "description": "This module explores advanced agent architectures, focusing on how agents plan, act, and observe to achieve complex goals. It covers key patterns like ReAct and Chain-of-Thought for robust agentic workflows.",
+      "topics": [
+        {
+          "title": "Introduction to Agent Architectures",
+          "description": "Overview of common design patterns for structuring autonomous agents.",
+          "path": "instruction/introduction-to-agent-architectures/introduction-to-agent-architectures.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "62d239e1-8637-4908-a55e-9402bec1e4dd"
+        },
+        {
+          "title": "The ReAct Pattern: Reasoning and Acting",
+          "description": "Detailed exploration of the ReAct (Reasoning and Acting) framework for agent control.",
+          "path": "instruction/the-react-pattern-reasoning-and-acting/the-react-pattern-reasoning-and-acting.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "0f4e228e-5d1c-4d11-b3a6-7c6b588b8335"
+        },
+        {
+          "title": "Implementing ReAct Agents",
+          "description": "Practical steps to build agents using the ReAct prompting strategy.",
+          "path": "instruction/implementing-react-agents/implementing-react-agents.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "57a696ec-c808-469b-b647-148139d802dd"
+        },
+        {
+          "title": "Chain-of-Thought (CoT) Prompting",
+          "description": "Techniques for guiding LLMs to generate intermediate reasoning steps.",
+          "path": "instruction/chain-of-thought-cot-prompting/chain-of-thought-cot-prompting.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "a16133b7-820f-4f9f-b380-8ff87a4a31a1"
+        },
+        {
+          "title": "Combining CoT with ReAct",
+          "description": "Synergistic approaches to integrate Chain-of-Thought reasoning into ReAct agents.",
+          "path": "instruction/combining-cot-with-react/combining-cot-with-react.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "63a51163-8662-4b9b-b468-4fa640ae2693"
+        },
+        {
+          "title": "Planning: Decomposing Complex Tasks",
+          "description": "Strategies for agents to break down high-level goals into executable sub-tasks.",
+          "path": "instruction/planning-decomposing-complex-tasks/planning-decomposing-complex-tasks.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "5717033d-5f5f-490a-9934-62269e479941"
+        },
+        {
+          "title": "Action: Executing Steps with Tools",
+          "description": "How agents select and utilize tools to perform planned actions.",
+          "path": "instruction/action-executing-steps-with-tools/action-executing-steps-with-tools.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "c3a0e214-b48e-4ff2-8ab5-d0865e8bf7ef"
+        },
+        {
+          "title": "Observation: Evaluating and Correcting",
+          "description": "Mechanisms for agents to assess the outcome of actions and identify areas for correction.",
+          "path": "instruction/observation-evaluating-and-correcting/observation-evaluating-and-correcting.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "fac0344b-97f4-4294-80a7-8ef9b6ab808e"
+        },
+        {
+          "title": "Self-Correction Mechanisms in Agents",
+          "description": "Designing agents that can detect and recover from errors or suboptimal outputs.",
+          "path": "instruction/self-correction-mechanisms-in-agents/self-correction-mechanisms-in-agents.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "bfeb3cbd-b94a-4b1e-8008-b87da2380465"
+        },
+        {
+          "title": "Iterative Refinement Loops",
+          "description": "Building agents that continuously improve their output through repeated planning, action, and observation.",
+          "path": "instruction/iterative-refinement-loops/iterative-refinement-loops.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "918c086c-895f-4500-98c5-f6871b219d2e"
+        },
+        {
+          "title": "Multi-Agent Systems: Introduction",
+          "description": "Foundational concepts for designing systems where multiple agents collaborate.",
+          "path": "instruction/multi-agent-systems-introduction/multi-agent-systems-introduction.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "58f13f14-ea1d-4f3c-b278-cde5f43bda00"
+        },
+        {
+          "title": "Designing Agentic Workflows",
+          "description": "Principles for structuring complex, multi-step processes driven by agents.",
+          "path": "instruction/designing-agentic-workflows/designing-agentic-workflows.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "2c1a9e2b-b98a-4772-a57e-958f0f9df62f"
+        }
+      ]
+    },
+    {
+      "title": "Agentic Frameworks: LangGraph and CrewAI",
+      "description": "This module provides hands-on experience with leading agentic programming frameworks, LangGraph and CrewAI. Learners will understand their architectures, learn to build complex workflows, and compare their strengths for different use cases.",
+      "topics": [
+        {
+          "title": "Introduction to Agentic Frameworks",
+          "description": "Overview of popular frameworks that streamline agent development and orchestration.",
+          "path": "instruction/introduction-to-agentic-frameworks/introduction-to-agentic-frameworks.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "5fbaab7e-cd98-46a5-9b11-1e4653df568e"
+        },
+        {
+          "title": "Overview of LangChain and LangGraph",
+          "description": "Understanding the LangChain ecosystem and the role of LangGraph for stateful multi-actor applications.",
+          "path": "instruction/overview-of-langchain-and-langgraph/overview-of-langchain-and-langgraph.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "224ce85c-a8e4-4e4e-8e64-259153bea8be"
+        },
+        {
+          "title": "Building Graphs with LangGraph",
+          "description": "Fundamentals of defining nodes and edges to create directed acyclic graphs for agentic flows.",
+          "path": "instruction/building-graphs-with-langgraph/building-graphs-with-langgraph.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "bb6ccd34-e16b-4caf-8a41-fb329d37ba14"
+        },
+        {
+          "title": "Nodes and Edges in LangGraph",
+          "description": "Detailed explanation of how to construct computational steps (nodes) and transitions (edges).",
+          "path": "instruction/nodes-and-edges-in-langgraph/nodes-and-edges-in-langgraph.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "0d746f0f-a942-40bf-aee4-15fdb7b7813c"
+        },
+        {
+          "title": "State Management in LangGraph",
+          "description": "How LangGraph manages and passes state between different nodes in a workflow.",
+          "path": "instruction/state-management-in-langgraph/state-management-in-langgraph.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "0c9b06c4-621a-43fc-a258-1120bb4bf436"
+        },
+        {
+          "title": "Conditional Logic in LangGraph Flows",
+          "description": "Implementing dynamic routing and decision-making within LangGraph workflows.",
+          "path": "instruction/conditional-logic-in-langgraph-flows/conditional-logic-in-langgraph-flows.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "7db9d6e5-00d2-49cb-b19e-f9e7b17f0525"
+        },
+        {
+          "title": "Introduction to CrewAI: Collaborative Agents",
+          "description": "Overview of CrewAI and its approach to building multi-agent systems with predefined roles.",
+          "path": "instruction/introduction-to-crewai-collaborative-agents/introduction-to-crewai-collaborative-agents.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "13450da8-42b5-4c84-8849-be49bc06bffa"
+        },
+        {
+          "title": "Defining Agents, Tasks, and Crews in CrewAI",
+          "description": "Learning to set up specialized agents, assign tasks, and orchestrate them into a crew.",
+          "path": "instruction/defining-agents-tasks-and-crews-in-crewai/defining-agents-tasks-and-crews-in-crewai.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "fad851b1-4426-4f14-bd29-0f8c720dc04a"
+        },
+        {
+          "title": "Orchestrating Agent Collaboration with CrewAI",
+          "description": "Techniques for enabling agents to work together, share information, and refine outputs.",
+          "path": "instruction/orchestrating-agent-collaboration-with-crewai/orchestrating-agent-collaboration-with-crewai.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "d2153974-0470-4438-a9ad-15ea95a4164b"
+        },
+        {
+          "title": "Tool Integration in CrewAI",
+          "description": "How to equip CrewAI agents with tools to perform external actions.",
+          "path": "instruction/tool-integration-in-crewai/tool-integration-in-crewai.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "5599429b-b84d-47e6-ae98-a355563d216b"
+        },
+        {
+          "title": "Comparing LangGraph and CrewAI",
+          "description": "Analyzing the strengths, weaknesses, and ideal use cases for each framework.",
+          "path": "instruction/comparing-langgraph-and-crewai/comparing-langgraph-and-crewai.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "5b68db0d-b163-46be-bc83-f58555cd5f69"
+        },
+        {
+          "title": "Choosing the Right Framework",
+          "description": "Guidance on selecting the most appropriate framework for specific agentic projects.",
+          "path": "instruction/choosing-the-right-framework/choosing-the-right-framework.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "1d738590-2123-4a98-a406-c72eeafd47dc"
+        }
+      ]
+    },
+    {
+      "title": "Advanced Agentic Patterns, Testing, and Deployment",
+      "description": "This module covers advanced design patterns for agents, strategies for testing and evaluating their performance, and best practices for deploying and maintaining agentic systems in production environments.",
+      "topics": [
+        {
+          "title": "Advanced Planning Strategies",
+          "description": "Exploring sophisticated planning algorithms and techniques for agents, beyond simple task decomposition.",
+          "path": "instruction/advanced-planning-strategies/advanced-planning-strategies.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "2a50708e-8a02-4aeb-ac13-046d5c7b3c9f"
+        },
+        {
+          "title": "Hierarchical Agents and Sub-Agents",
+          "description": "Designing agents that can delegate tasks to specialized sub-agents for modularity and scalability.",
+          "path": "instruction/hierarchical-agents-and-sub-agents/hierarchical-agents-and-sub-agents.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "b9ce9127-2e01-4055-adcd-21be34cf54bb"
+        },
+        {
+          "title": "Human-in-the-Loop (HITL) Agentic Systems",
+          "description": "Integrating human oversight and intervention into agent workflows for validation and complex decision-making.",
+          "path": "instruction/human-in-the-loop-hitl-agentic-systems/human-in-the-loop-hitl-agentic-systems.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "2c730862-0800-4006-92f2-8635bf5a69da"
+        },
+        {
+          "title": "Building Robust and Resilient Agents",
+          "description": "Techniques for making agents more fault-tolerant and capable of handling unexpected situations.",
+          "path": "instruction/building-robust-and-resilient-agents/building-robust-and-resilient-agents.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "dfcdae9c-9387-4ca1-8356-e3569cf0ee73"
+        },
+        {
+          "title": "Testing Agentic Systems",
+          "description": "Developing strategies and tools for unit, integration, and end-to-end testing of agents.",
+          "path": "instruction/testing-agentic-systems/testing-agentic-systems.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "5e91b26e-399c-4940-8a37-a367c2ed3d0b"
+        },
+        {
+          "title": "Evaluation Metrics for Agents",
+          "description": "Defining quantitative and qualitative metrics to assess agent performance and output quality.",
+          "path": "instruction/evaluation-metrics-for-agents/evaluation-metrics-for-agents.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "ce07de1c-276a-4212-8b52-4d718d480ce7"
+        },
+        {
+          "title": "Debugging Agentic Workflows",
+          "description": "Techniques and tools for identifying and resolving issues within complex agentic processes.",
+          "path": "instruction/debugging-agentic-workflows/debugging-agentic-workflows.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "bd62019e-4c41-45fb-bb2b-ddef6c4f4525"
+        },
+        {
+          "title": "Monitoring Agent Performance",
+          "description": "Setting up monitoring systems to track agent behavior, resource usage, and success rates in production.",
+          "path": "instruction/monitoring-agent-performance/monitoring-agent-performance.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "49de3048-7718-4c07-817f-259999f9f8c7"
+        },
+        {
+          "title": "Deployment Strategies for Agents",
+          "description": "Best practices for deploying agentic applications to various cloud and on-premise environments.",
+          "path": "instruction/deployment-strategies-for-agents/deployment-strategies-for-agents.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "33eb90db-6e57-4e74-b40b-88b336dc19e6"
+        },
+        {
+          "title": "Scalability Considerations",
+          "description": "Designing agentic systems that can handle increased load and complexity.",
+          "path": "instruction/scalability-considerations/scalability-considerations.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "9d395eff-4ab6-40a3-af2d-93a40f3c95d3"
+        },
+        {
+          "title": "Security Best Practices for Production Agents",
+          "description": "Implementing security measures to protect agentic systems from vulnerabilities and misuse.",
+          "path": "instruction/security-best-practices-for-production-agents/security-best-practices-for-production-agents.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "92652a3c-fb65-41bd-abd7-e1cf0b110669"
+        },
+        {
+          "title": "Future Trends in Agentic Programming",
+          "description": "Discussion of emerging concepts, research directions, and the evolving landscape of agentic AI.",
+          "path": "instruction/future-trends-in-agentic-programming/future-trends-in-agentic-programming.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "c62ab4de-172d-49ac-bf1f-52502cbf5848"
+        }
+      ]
+    },
+    {
+      "title": "Capstone Project: Building a Comprehensive Agentic System",
+      "description": "This capstone module provides a practical opportunity to apply all learned concepts by designing, implementing, and evaluating a complete agentic system to solve a real-world problem, integrating LLMs, tools, memory, and an orchestration framework.",
+      "topics": [
+        {
+          "title": "Introduction to the Capstone Project",
+          "description": "Overview of the capstone's goals, requirements, and project options.",
+          "path": "instruction/introduction-to-the-capstone-project/introduction-to-the-capstone-project.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "77318aae-f897-41c6-a2e0-04febfd67623"
+        },
+        {
+          "title": "Project Scope Definition and Goal Setting",
+          "description": "Guidance on defining a clear problem statement and measurable objectives for your agentic system.",
+          "path": "instruction/project-scope-definition-and-goal-setting/project-scope-definition-and-goal-setting.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "8a60a08c-a996-4f02-a792-0f148efc91d6"
+        },
+        {
+          "title": "Designing the Agentic Architecture",
+          "description": "Planning the overall structure of your agent, including its components and interaction flows.",
+          "path": "instruction/designing-the-agentic-architecture/designing-the-agentic-architecture.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "3d29ce65-7023-479b-8611-0beecaed124d"
+        },
+        {
+          "title": "Choosing Tools and APIs",
+          "description": "Selecting and integrating appropriate external tools and APIs for your agent's functionality.",
+          "path": "instruction/choosing-tools-and-apis/choosing-tools-and-apis.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "814923d7-4e9a-4fef-b4fb-e7612fdef555"
+        },
+        {
+          "title": "Implementing Planning and Reasoning Components",
+          "description": "Developing the LLM-driven logic for task decomposition, decision-making, and self-correction.",
+          "path": "instruction/implementing-planning-and-reasoning-components/implementing-planning-and-reasoning-components.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "ea98cb8e-8a24-434c-bee6-e4345a0c9e1a"
+        },
+        {
+          "title": "Integrating Memory and RAG",
+          "description": "Building and incorporating a memory system, potentially using RAG, for long-term knowledge.",
+          "path": "instruction/integrating-memory-and-rag/integrating-memory-and-rag.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "393aada5-01bb-4610-94ee-97b2405fc564"
+        },
+        {
+          "title": "Developing Collaborative Agents (if applicable)",
+          "description": "For multi-agent projects, designing the interaction and collaboration protocols between agents.",
+          "path": "instruction/developing-collaborative-agents-if-applicable/developing-collaborative-agents-if-applicable.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "d7d59ff2-2e77-4cac-b7e4-9574c60338b7"
+        },
+        {
+          "title": "Building the Core Workflow with a Framework",
+          "description": "Implementing the agent's main execution flow using LangGraph, CrewAI, or another chosen framework.",
+          "path": "instruction/building-the-core-workflow-with-a-framework/building-the-core-workflow-with-a-framework.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "ac6e9b7b-ffe2-4307-a57a-1dc01c9f7b27"
+        },
+        {
+          "title": "Testing and Debugging the System",
+          "description": "Applying testing methodologies and debugging techniques to ensure agent functionality and reliability.",
+          "path": "instruction/testing-and-debugging-the-system/testing-and-debugging-the-system.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "b9eabadb-ea09-4746-9045-9d39047b3acb"
+        },
+        {
+          "title": "Evaluating Project Performance",
+          "description": "Assessing the agent's effectiveness against the defined project goals and metrics.",
+          "path": "instruction/evaluating-project-performance/evaluating-project-performance.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "8137a320-e3f5-48b9-b50d-1d1867087b51"
+        },
+        {
+          "title": "Refining and Optimizing the Agent",
+          "description": "Iterating on the agent's design and implementation to improve its performance, efficiency, and robustness.",
+          "path": "instruction/refining-and-optimizing-the-agent/refining-and-optimizing-the-agent.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "96aaf057-f8e0-4bd5-ab07-67e70c785520"
+        },
+        {
+          "title": "Presenting Your Agentic Solution",
+          "description": "Guidelines for documenting and presenting your capstone project, highlighting its design, implementation, and results.",
+          "path": "instruction/presenting-your-agentic-solution/presenting-your-agentic-solution.md",
+          "type": "instruction",
+          "state": "stub",
+          "id": "39907d59-941f-4425-979e-2d465eceec45"
+        }
+      ]
+    }
+  ]
+}
