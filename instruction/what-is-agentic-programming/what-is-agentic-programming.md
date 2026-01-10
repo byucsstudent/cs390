@@ -22,6 +22,8 @@ This shift moves us from merely automating tasks to automating *problem-solving*
 
 ### The Core Agentic Loop: Plan, Act, Observe
 
+![agenticProgramming.jpg](agenticProgramming.jpg)
+
 The fundamental architecture of an agentic system revolves around an iterative cycle known as the Plan, Act, Observe (PAO) loop. This loop mirrors how humans approach complex tasks:
 
 #### Planning
