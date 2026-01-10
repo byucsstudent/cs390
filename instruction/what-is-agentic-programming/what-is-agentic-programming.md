@@ -1,5 +1,11 @@
 # What is Agentic Programming?
 
+
+```masteryls
+{"id":"4027bfe7-a7cb-48ec-afc2-215f0c25b8cb", "title":"You are the AI", "type":"essay", "body":"Pretend that you are the LLM. Take the following prompt and come up with a plan to resolve it. Then create an ordered list that break the plan into intermediate steps, define actions for each step, and define what you would observe to validate the success of the actions.<br />**Prompt**<br />I want to give bonuses to each of my employees. I want it to be fair based upon past performance, but also to server as an incentive for future effort and loyalty.
+" }
+```
+
 Agentic programming represents a profound shift in how we design and build software, moving beyond rigid, pre-scripted instructions to create autonomous, goal-oriented systems. At its heart, agentic programming leverages the reasoning capabilities of Large Language Models (LLMs) to enable software agents to understand high-level objectives, break them down into manageable tasks, execute actions, and learn from observations, all while striving to achieve a defined goal. This paradigm empowers developers to build intelligent applications that can adapt, self-correct, and even collaborate, mirroring aspects of human problem-solving in complex environments. It's about orchestrating intelligence, memory, and tool use to solve problems that were previously intractable for traditional deterministic code.
 
 ## The Paradigm Shift: From Scripts to Agents
@@ -79,6 +85,9 @@ Agents extend their capabilities beyond mere text generation by interacting with
 *   **Defining Tools:** Developers define tools as functions with clear descriptions of what they do and what parameters they accept.
 *   **Providing Tools to the LLM:** These tool descriptions are injected into the LLM's context. The LLM, guided by prompt engineering techniques like ReAct, learns to "call" these tools by generating specific structured outputs (e.g., JSON) that indicate the tool name and its arguments.
 *   **Execution and Observation:** An orchestrator then intercepts this call, executes the actual function, and feeds the result back to the LLM as an observation. This allows agents to perform actions like searching the web, executing Python code, calling external APIs (e.g., weather, stock prices, CRM), or interacting with databases.
+
+
+
 
 ## Orchestration Frameworks: Building Agentic Workflows
 
