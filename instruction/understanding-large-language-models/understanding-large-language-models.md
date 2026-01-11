@@ -1,5 +1,6 @@
 # Understanding Large Language Models
 
+
 Large Language Models (LLMs) have revolutionized our interaction with artificial intelligence, moving beyond simple question-answering systems to become powerful reasoning engines capable of complex, multi-step problem solving. This shift is particularly evident in the burgeoning field of agentic programming, where software systems transition from executing rigid, pre-defined scripts to becoming autonomous entities. These agents leverage LLMs as their "brain," enabling them to understand high-level goals, break them down, and interact with the world to achieve objectives that would traditionally require human intervention. This module explores the foundational architecture and key capabilities of LLMs that make them uniquely suited for these sophisticated agentic tasks.
 
 ## The Agentic Paradigm: LLMs as Reasoning Engines
