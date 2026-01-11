@@ -115,7 +115,7 @@
           "id": "219604fc-7fda-4e63-858b-cfa443d4147a",
           "state": "published",
           "description": "Exploring the architecture and capabilities of LLMs that make them suitable for agentic tasks.",
-          "commit": "853932c9db34f92eb7e5a562122c163ff2e699ed"
+          "commit": "44f50841a29b3536a4f07c69c7c575495a7394cb"
         },
         {
           "title": "The Role of LLMs in Agentic Systems",
