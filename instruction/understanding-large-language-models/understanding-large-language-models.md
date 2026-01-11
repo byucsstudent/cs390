@@ -16,6 +16,12 @@ This fundamental cycle defines how an agent operates:
 
 This loop allows agents to be self-correcting, learning from their interactions and adjusting their behavior until the objective is achieved.
 
+
+```masteryls
+{"id":"800f8f55-2c94-4d3d-8180-c5b8ae3b894f", "title":"Extending PAO", "type":"essay", "body":"Suggest one way that `PAO` could be extended to provide more value" }
+```
+
+
 ### Model Context Protocol and Tool Use
 
 For an LLM to effectively act in the world, it needs to interact with external systems. The Model Context Protocol is a crucial abstraction layer that enables this. It defines a standardized way for the LLM to understand what tools are available, what their functions are, and what arguments they expect. When the LLLLM decides to use a tool, it generates structured output (often JSON) that conforms to this protocol, which is then parsed by the agent framework and used to invoke the actual tool. The tool's output is then formatted back into the LLM's context, allowing it to "observe" the results.
