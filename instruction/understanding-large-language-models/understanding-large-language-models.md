@@ -104,6 +104,9 @@ RAG typically involves two main stages:
 2.  **Generation**: The retrieved relevant information is then added to the LLM's context window, along with the original prompt. The LLM then uses this augmented context to generate a more informed, accurate, and grounded response or to guide its next action.
 
 **Example: RAG for a Technical Support Agent**
+
+![ragExample.jpg](ragExample.jpg)
+
 A technical support agent powered by an LLM receives a query: "How do I troubleshoot error code 404 on your API?"
 
 *   **Without RAG**: The LLM might give a generic explanation of HTTP 404 errors, which might not be specific to *your* API.
