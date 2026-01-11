@@ -115,6 +115,14 @@ A technical support agent powered by an LLM receives a query: "How do I troubles
     *   **Retrieved Content**: The retriever finds a section detailing common 404 causes for your API, specific endpoints that might return it, and troubleshooting steps unique to your platform.
     *   **Generation**: The LLM receives the original query *plus* the retrieved documentation snippets. It then generates a precise answer, referencing your specific API documentation and providing relevant, actionable troubleshooting steps.
 
+```masteryls
+{"id":"6a9ffea5-62a5-4126-977a-4ee569a435f8", "title":"Understanding RAG's Core Function", "type":"multiple-choice", "body":"In the context of LLMs performing agentic tasks, what is the fundamental mechanism by which Retrieval-Augmented Generation (RAG) primarily enhances the LLM's ability to provide accurate, contextually relevant, and up-to-date responses?" }
+- [ ] RAG dynamically updates the LLM's foundational model weights with new factual data during inference to prevent hallucinations.
+- [x] RAG retrieves relevant external information (e.g., documents, database records) from a separate knowledge base *before* the LLM generates its response, using this retrieved context to inform the generation.
+- [ ] RAG enables the LLM to perform real-time web searches and browse the internet independently to find answers to user queries as it generates text.
+- [ ] RAG involves continuously pre-training the LLM on a vast, ever-growing corpus of domain-specific data to expand its internal knowledge base.
+```
+
 ## Orchestration: Building Self-Correcting Workflows
 
 Building sophisticated agentic systems requires more than just individual LLMs and tools; it demands orchestration. Frameworks like LangGraph, CrewAI, and AutoGen provide the scaffolding to design, manage, and execute complex multi-agent workflows.
