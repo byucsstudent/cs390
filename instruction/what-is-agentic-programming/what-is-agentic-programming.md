@@ -115,6 +115,8 @@ Let's imagine building a "Smart Content Creator" agentic system using these prin
 
 **Goal:** Generate a blog post about "The Future of AI in Healthcare," including recent trends and potential ethical considerations.
 
+![crewAiExampleMd.jpg](crewAiExampleMd.jpg)
+
 **CrewAI Example:**
 
 1.  **Define Agents:**
