@@ -125,7 +125,7 @@ Let's imagine building a "Smart Content Creator" agentic system using these prin
         *   **Tools:** Web Search (e.g., Google Scholar, PubMed), Document Reader (for PDFs/reports).
         *   **Goal:** Gather comprehensive, up-to-date information on AI in healthcare, focusing on recent trends and ethical debates.
     *   **Writer Agent:**
-        *   ****Role:** Professional content writer, skilled in engaging prose and structuring articles.
+        *   **Role:** Professional content writer, skilled in engaging prose and structuring articles.
         *   **Tools:** None (primarily uses LLM for generation).
         *   **Goal:** Draft a well-structured and engaging blog post based on the researcher's findings.
     *   **Editor Agent:**
