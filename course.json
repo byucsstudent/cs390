@@ -23,8 +23,13 @@
           "path": "instruction/what-is-agentic-programming/what-is-agentic-programming.md",
           "id": "484c9f60-bafb-4ffb-9413-cbc4d504d32c",
           "state": "published",
+          "interactions": [
+            "d35fd118-2ab1-44f7-bac3-502e426a335a",
+            "4027bfe7-a7cb-48ec-afc2-215f0c25b8cb",
+            "732d1dd9-fbae-4308-a03e-54dc0f5e670b"
+          ],
           "description": "Defining agentic programming and its role in modern software development.",
-          "commit": "7c623563a03759a3678075b7df54a99d5e6ba189"
+          "commit": "92d84e70ad46017322dfe2db2d87f3716ade8d6c"
         },
         {
           "title": "Traditional Programming vs. Agentic Paradigms",
