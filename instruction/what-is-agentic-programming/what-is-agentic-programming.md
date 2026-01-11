@@ -88,6 +88,13 @@ Agents extend their capabilities beyond mere text generation by interacting with
 
 While the core concepts are powerful, managing complex agent interactions, state, and tool calls manually can be daunting. Frameworks simplify the creation and orchestration of agentic systems:
 
+### LangChain
+LangChain is a package that helps you construct and manage the components of an agentic system.
+* **Support for RAG**: It's a foundational tool for implementing Retrieval-Augmented Generation, allowing agents to access external knowledge.
+* **Tool orchestration**: It assists in connecting LLMs with various tools, enabling agents to interact with the outside world.
+
+Think of LangChain as a toolkit that simplifies the process of developing applications powered by LLMs, especially those involving agents, memory, and external data sources. It's often used as a base for frameworks.
+
 ### LangGraph
 Built on top of LangChain, LangGraph focuses on creating stateful, multi-actor applications with LLMs by representing the agentic workflow as a directed acyclic graph (DAG) or a state machine.
 *   **State Management:** It allows defining a shared state that agents can read from and write to, enabling complex, multi-step processes where agents pass information between each other.
