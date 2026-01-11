@@ -122,8 +122,12 @@
           "path": "instruction/understanding-large-language-models/understanding-large-language-models.md",
           "id": "219604fc-7fda-4e63-858b-cfa443d4147a",
           "state": "published",
+          "interactions": [
+            "800f8f55-2c94-4d3d-8180-c5b8ae3b894f",
+            "6a9ffea5-62a5-4126-977a-4ee569a435f8"
+          ],
           "description": "Exploring the architecture and capabilities of LLMs that make them suitable for agentic tasks.",
-          "commit": "7d76cff0d5530f75d9d066a2d164771bd40d94f5"
+          "commit": "5debb1cf0e93b017b27dda27b84cd67d317aa8d4"
         },
         {
           "title": "The Role of LLMs in Agentic Systems",
