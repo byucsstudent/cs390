@@ -160,19 +160,19 @@ This collaborative approach allows each agent to specialize, leveraging its spec
 While powerful, agentic programming presents its own set of challenges:
 
 1.  **Hallucinations and Reliability:** LLMs can sometimes generate incorrect or fabricated information, impacting the agent's reliability.
-    *   **Solution:** Implement robust RAG to ground responses in factual data. Use prompt engineering techniques (e.g., "think step-by-step," "cite sources") to encourage careful reasoning. Incorporate validation steps where an agent cross-references information or a separate "validator" agent checks facts.
+    >   **Solution:** Implement robust RAG to ground responses in factual data. Use prompt engineering techniques (e.g., "think step-by-step," "cite sources") to encourage careful reasoning. Incorporate validation steps where an agent cross-references information or a separate "validator" agent checks facts.
 
 2.  **Cost and Latency:** Frequent LLM calls, especially for complex reasoning or multiple iterations of the PAO loop, can lead to high costs and slow response times.
-    *   **Solution:** Optimize prompt length. Use smaller, faster models for simpler tasks and larger models only when necessary. Implement caching for frequently accessed information or common LLM outputs. Design workflows to minimize unnecessary LLM calls. Consider asynchronous execution for parallel tasks.
+    >   **Solution:** Optimize prompt length. Use smaller, faster models for simpler tasks and larger models only when necessary. Implement caching for frequently accessed information or common LLM outputs. Design workflows to minimize unnecessary LLM calls. Consider asynchronous execution for parallel tasks.
 
 3.  **Debugging Complexity:** The non-deterministic nature of LLMs makes debugging agentic systems challenging. It's hard to trace why an agent made a particular decision or took an unexpected action.
-    *   **Solution:** Implement comprehensive logging of all LLM inputs (prompts), outputs (thoughts, actions), and tool observations. Use visualization tools (e.g., those provided by LangGraph or custom dashboards) to trace agent execution paths. Employ iterative testing with clear test cases to pinpoint issues.
+    >   **Solution:** Implement comprehensive logging of all LLM inputs (prompts), outputs (thoughts, actions), and tool observations. Use visualization tools (e.g., those provided by LangGraph or custom dashboards) to trace agent execution paths. Employ iterative testing with clear test cases to pinpoint issues.
 
 4.  **Managing State and Context:** Keeping track of relevant information across multiple turns or complex workflows, especially with LLM context window limitations, can be difficult.
-    *   **Solution:** Use effective RAG for long-term memory. Implement structured state management within frameworks like LangGraph. Summarize past interactions or observations to fit within the LLM's context window, providing only the most relevant information for the current decision.
+    >   **Solution:** Use effective RAG for long-term memory. Implement structured state management within frameworks like LangGraph. Summarize past interactions or observations to fit within the LLM's context window, providing only the most relevant information for the current decision.
 
 5.  **Security and Safety:** Agents interacting with external tools or sensitive data pose security risks. Malicious inputs or unintended actions can have real-world consequences.
-    *   **Solution:** Implement strict input validation and sanitization for all user inputs and tool outputs. Use guardrails and moderation APIs to filter harmful content or actions. Implement "human-in-the-loop" mechanisms for critical decisions or before executing destructive actions. Restrict tool access to only what's absolutely necessary (principle of least privilege).
+    >   **Solution:** Implement strict input validation and sanitization for all user inputs and tool outputs. Use guardrails and moderation APIs to filter harmful content or actions. Implement "human-in-the-loop" mechanisms for critical decisions or before executing destructive actions. Restrict tool access to only what's absolutely necessary (principle of least privilege).
 
 ## Summary
 
