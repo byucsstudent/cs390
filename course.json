@@ -150,8 +150,8 @@
           "type": "instruction",
           "path": "instruction/basic-prompting-techniques/basic-prompting-techniques.md",
           "id": "fa75eec7-016b-4c4f-822b-b3f4bd803e2a",
-          "state": "stub",
-          "description": "Fundamental methods for constructing prompts, including clear instructions and role-playing."
+          "state": "published",
+          "description": "Under the module of LLMs as reasoning engines and prompt engineering. Create a top that covers fundamental methods for constructing prompts, including clear instructions and role-playing."
         },
         {
           "title": "Few-Shot Prompting",
