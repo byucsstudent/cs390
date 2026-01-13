@@ -31,6 +31,12 @@ The most fundamental aspect of effective prompting is providing instructions tha
 
 *Why it's better:* Specifies location, duration, starting point, and exact data points required, leaving no room for misinterpretation.
 
+
+```masteryls
+{"id":"e1e7e2a5-461b-4464-8cc2-5d052ee253c4", "title":"Prompt practice", "type":"essay", "body":"Create an LLM prompt for advice on looking for a job." }
+```
+
+
 ## Providing Context
 
 LLMs operate based on the information provided in their input. Supplying relevant context helps the model understand the background, constraints, and nuances of a task, leading to more accurate and appropriate responses. Context can include background information, examples, specific data, or previous turns in a conversation.
