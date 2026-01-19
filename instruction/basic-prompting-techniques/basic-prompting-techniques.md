@@ -124,6 +124,10 @@ The quick brown fox jumps over the lazy dog.
 
 *Why it's better:* The `---` and `'''` clearly delineate instructions from the text, ensuring the LLM processes each part correctly.
 
+```masteryls
+{"id":"46cc32f0-a81f-4f2e-a44e-9498bcc833aa", "title":"Prompt delimiter practice", "type":"essay", "body":"Create an LLM prompt that clearly delimits the provided data." }
+```
+
 ## Output Format Specification
 
 Often, you don't just want an answer; you want it in a specific format. Explicitly telling the LLM the desired output structure is vital for downstream processing (e.g., if another part of your agentic system expects JSON) and for user readability.
