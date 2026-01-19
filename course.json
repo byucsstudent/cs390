@@ -153,10 +153,11 @@
           "state": "published",
           "interactions": [
             "e1e7e2a5-461b-4464-8cc2-5d052ee253c4",
-            "abb88c1a-387e-46da-8044-3bbe118e0437"
+            "abb88c1a-387e-46da-8044-3bbe118e0437",
+            "46cc32f0-a81f-4f2e-a44e-9498bcc833aa"
           ],
           "description": "Under the module of LLMs as reasoning engines and prompt engineering. Create a top that covers fundamental methods for constructing prompts, including clear instructions and role-playing.",
-          "commit": "7d4bf271c1f867ca7ba533fdc8e5707ff2cf6314"
+          "commit": "8b16a3c9c322148e43b658d42acc84077be58661"
         },
         {
           "title": "Few-Shot Prompting",
