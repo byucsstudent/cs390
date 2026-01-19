@@ -60,6 +60,11 @@ LLMs operate based on the information provided in their input. Supplying relevan
 
 *Why it's better:* The context (busy executive, specific focus, bullet point format) guides the LLM to produce a summary tailored to a specific need.
 
+
+```masteryls
+{"id":"abb88c1a-387e-46da-8044-3bbe118e0437", "title":"Prompt context practice", "type":"essay", "body":"Create an LLM prompt that includes context that helps the LLM better answer the prompt." }
+```
+
 ## Role-Playing
 
 Assigning a specific role or persona to the LLM can significantly influence its tone, style, and even the type of information it prioritizes. This technique is incredibly powerful for guiding the model's "perspective" and making its output more appropriate for a given task.
