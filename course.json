@@ -76,8 +76,8 @@
           "type": "instruction",
           "path": "instruction/use-cases-and-applications/use-cases-and-applications.md",
           "id": "73919b08-b95e-47fb-88e9-39c23b44ac94",
-          "state": "stub",
-          "description": "Reviewing diverse real-world applications where agentic programming excels."
+          "state": "published",
+          "description": "Reviewing diverse real-world applications where agentic programming excels. Include VSCode Copilot as example. Discuss its architecture in detail."
         },
         {
           "title": "Ethical Considerations in Agentic Systems",
