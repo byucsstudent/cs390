@@ -155,7 +155,10 @@ Consider a task you perform daily that involves multiple steps—perhaps organiz
 *   What **tools** (APIs, databases, search engines) would an agent need to access to complete this task autonomously?
 *   What is the "Success Criterion" that would allow the agent to know it has finished the job?
 
-Reflecting on these questions helps shift your mindset from writing instructions to designing goals.
+```masteryls
+{"id":"7a45e114-8751-420e-8f7f-edf70fe6414f", "title":"Essay", "type":"essay" }
+Reflecting on these questions helps shift your mindset from writing instructions to designing goals. Describe the pieces you might build into an agent system that acts as a travel agent.
+```
 
 ## External Resources for Further Exploration
 
