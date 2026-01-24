@@ -105,7 +105,7 @@ When you type a function signature, the Copilot Agent doesn't just send that lin
 This "Agentic Context" ensures the generated code isn't just syntactically correct, but also relevant to the specific project structure.
 
 ```masteryls
-{"id":"copilot-arch-01", "title":"The Role of the Copilot Agent", "type":"multiple-choice"}
+{"id":"0b513fd3-7646-4d74-b258-5f778ff465b0", "title":"The Role of the Copilot Agent", "type":"multiple-choice"}
 What is the primary responsibility of the "Copilot Agent" (the local Node.js process) within the stack?
 
 - [ ] It hosts the LLM locally so that code never leaves the user's machine.
