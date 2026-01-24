@@ -35,6 +35,27 @@ When you interact with Copilot—whether through inline suggestions or the Chat 
 3.  **The Model Context Protocol (MCP):** While Copilot uses proprietary methods, many modern agents use protocols like MCP to allow the LLM to "talk" to the file system, terminal, and external APIs securely.
 4.  **The Reasoning Model:** The core LLM that processes the context and generates the agentic response.
 
+### Execution
+GitHub Copilot uses separate models for "planning" versus "execution" in every interaction, it highlights an architecture designed for **multi-model flexibility**. 
+
+According to the **Common Challenges and Solutions** section, agentic systems often optimize performance by splitting tasks:
+
+*   **Triage/Observation:** Smaller, faster models can be used for simple context gathering or error checking to reduce latency and cost.
+*   **Complex Planning:** Larger models (like **GPT-4o** or **Claude 3.5 Sonnet**) are reserved for high-level reasoning, such as when you use "Copilot Edits" to refactor code across multiple files.
+
+### Conceptual Model Routing
+In a sophisticated agentic stack like Copilot’s, the "Orchestrator" acts as a router:
+
+```mermaid
+graph TD
+    A[User Intent] --> B{Orchestrator}
+    B -- Simple Autocomplete --> C[Fast/Small Model]
+    B -- Multi-file Refactor --> D[Reasoning Model - e.g., GPT-4o]
+    D --> E[Plan Generated]
+    E --> F[Execution/Code Modification]
+```
+
+This "tiered" approach allows the system to be responsive for typing while remaining powerful for complex architectural changes. Does this distinction between a fast "prediction" and a slower "plan" change how you think about the AI's "intelligence"?
 
 ## The GitHub Copilot Stack: Architecture and Origins
 
