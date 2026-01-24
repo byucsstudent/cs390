@@ -165,7 +165,12 @@
           "path": "instruction/few-shot-prompting/few-shot-prompting.md",
           "id": "2f91919c-e746-4d16-b401-db8fe3a81dea",
           "state": "published",
-          "description": "Leveraging examples within prompts to teach LLMs new tasks or output formats.\n\n`Context`: in a module named LLMs as reasoning engines & prompt engineering fundementatals. Following a topic on basic prompting techniques. "
+          "interactions": [
+            "d4cf64c1-9dbd-4285-9d44-2c5501a46f22",
+            "83cd2600-a08a-4635-9b58-cdc53f4c90db"
+          ],
+          "description": "Leveraging examples within prompts to teach LLMs new tasks or output formats.\n\n`Context`: in a module named LLMs as reasoning engines & prompt engineering fundementatals. Following a topic on basic prompting techniques. ",
+          "commit": "1b4ce2391e59c845fda13b97baed8a9209573e57"
         },
         {
           "title": "Zero-Shot Prompting",
