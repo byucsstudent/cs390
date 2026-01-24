@@ -17,7 +17,8 @@ This shift moves us from merely automating tasks to automating *problem-solving*
 
 
 ```masteryls
-{"id":"d35fd118-2ab1-44f7-bac3-502e426a335a", "title":"What is agentic programming", "type":"teaching", "body":"Can you explain to me how agentic programming differs from traditional programming?" }
+{"id":"d35fd118-2ab1-44f7-bac3-502e426a335a", "title":"What is agentic programming?", "type":"teaching" }
+Can you explain to me how agentic programming differs from traditional programming?
 ```
 
 
