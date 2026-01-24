@@ -173,9 +173,11 @@
           "path": "instruction/zero-shot-prompting/zero-shot-prompting.md",
           "id": "ac1fc78a-8bf3-49ec-997f-0037d8876e40",
           "state": "published",
-          "interactions": [],
+          "interactions": [
+            "fa2fcc4f-0515-4e39-b56d-d2318fd94ad4"
+          ],
           "description": "Techniques for getting LLMs to perform tasks without explicit examples.",
-          "commit": "823dfd75aea7d2952251b15c5f992bb6cc8903a6"
+          "commit": "790cdf7b27d9bf3dabf4aca489a03cba16469eb2"
         },
         {
           "title": "Temperature and Top-P: Controlling Creativity",
