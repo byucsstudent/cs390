@@ -119,6 +119,11 @@ Few-shot prompting isn't always necessary, but it becomes invaluable in specific
 *   **Controlling Tone and Style:** To ensure outputs match a specific brand voice, formality level, or creative style.
 *   **Minimizing Hallucinations:** By providing factual examples, you can implicitly guide the model to stick to known facts or a specific knowledge domain.
 
+```masteryls
+{"id":"d4cf64c1-9dbd-4285-9d44-2c5501a46f22",  "title":"Few-shot practice", "type":"essay" }
+Create a prompt that demonstrates the key characteristics of `few-shot` prompts.
+```
+
 ## Best Practices for Crafting Effective Few-Shot Prompts
 
 The quality of your examples directly impacts the LLM's performance. Consider these best practices:
@@ -193,6 +198,13 @@ It's important to understand the distinction between few-shot prompting and fine
     *   Requires a significant amount of high-quality data and computational resources.
 
 Few-shot prompting is often the first step. If you find yourself needing hundreds or thousands of examples to get the desired behavior, or if few-shot performance is consistently inadequate, fine-tuning might be the next logical step.
+
+
+```masteryls
+{"id":"83cd2600-a08a-4635-9b58-cdc53f4c90db", "title":"Essay", "type":"essay" }
+Descript a situation where you would want to use **Fine-Tuning** instead of **Few-Shot** prompting.
+```
+
 
 ## Engaging with Few-Shot Prompting
 
