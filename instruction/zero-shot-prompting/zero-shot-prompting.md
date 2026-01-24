@@ -92,6 +92,11 @@ Zero-shot prompting offers several compelling benefits, especially in the contex
 *   **Rapid Prototyping:** Developers can quickly test ideas and iterate on task definitions without extensive data preparation.
 *   **Baseline Performance:** Zero-shot often provides a strong baseline performance that can be improved upon with other techniques if needed.
 
+```masteryls
+{"id":"fa2fcc4f-0515-4e39-b56d-d2318fd94ad4", "title":"Zero-shot practice", "type":"essay" }
+Create a prompt that demonstrates the key characteristics of `zero-shot` prompts.
+```
+
 ## Common Challenges and Solutions
 
 While powerful, zero-shot prompting isn't without its challenges. Understanding these and knowing how to mitigate them is crucial for effective prompt engineering.
