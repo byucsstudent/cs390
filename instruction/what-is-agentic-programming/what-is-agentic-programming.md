@@ -182,7 +182,8 @@ While powerful, agentic programming presents its own set of challenges:
 
 
 ```masteryls
-{"id":"732d1dd9-fbae-4308-a03e-54dc0f5e670b", "title":"Additional solutions", "type":"essay", "body":"Propose an additional solution to any of the above problems or identify a new problem and solution" }
+{"id":"732d1dd9-fbae-4308-a03e-54dc0f5e670b", "title":"Additional solutions", "type":"essay" }
+Propose an additional solution to any of the above problems or identify a new problem and solution
 ```
 
 
