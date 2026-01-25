@@ -83,7 +83,11 @@ Agents extend their capabilities beyond mere text generation by interacting with
 *   **Execution and Observation:** An orchestrator then intercepts this call, executes the actual function, and feeds the result back to the LLM as an observation. This allows agents to perform actions like searching the web, executing Python code, calling external APIs (e.g., weather, stock prices, CRM), or interacting with databases.
 
 ```masteryls
-{"id":"4027bfe7-a7cb-48ec-afc2-215f0c25b8cb", "title":"You are the AI", "type":"essay", "body":"Pretend that you are the LLM. Take the following prompt and come up with a plan to resolve it. Then create an ordered list that break the plan into intermediate steps, define actions for each step, and define what you would observe to validate the success of the actions.\n\n_Prompt_:\nI want to give bonuses to each of my employees. I want it to be fair based upon past performance, but also to server as an incentive for future effort and loyalty." }
+{"id":"4027bfe7-a7cb-48ec-afc2-215f0c25b8cb", "title":"You are the AI", "type":"essay" }
+Pretend that you are the LLM. Take the following prompt and come up with a plan to resolve it. Then create an ordered list that break the plan into intermediate steps, define actions for each step, and define what you would observe to validate the success of the actions.
+
+   _Prompt_:
+   I want to give bonuses to each of my employees. I want it to be fair based upon past performance, but also to server as an incentive for future effort and loyalty.
 ```
 
 ## Orchestration Frameworks: Building Agentic Workflows
