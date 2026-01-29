@@ -348,7 +348,7 @@
           "type": "instruction",
           "path": "instruction/the-challenge-of-stateless-llms/the-challenge-of-stateless-llms.md",
           "id": "4efeb689-7f77-4e01-8232-383a28be4fe6",
-          "state": "stub",
+          "state": "published",
           "description": "Understanding why LLMs, by default, lack memory and how this impacts agents."
         },
         {
