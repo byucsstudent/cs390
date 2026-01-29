@@ -388,7 +388,7 @@
           "type": "instruction",
           "path": "instruction/retrieval-augmented-generation-rag-explained/retrieval-augmented-generation-rag-explained.md",
           "id": "404d5e0f-78a9-4164-b1c0-a871b090d555",
-          "state": "stub",
+          "state": "published",
           "description": "A detailed breakdown of the RAG paradigm: retrieve relevant info, then generate a response."
         },
         {
