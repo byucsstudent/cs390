@@ -380,7 +380,7 @@
           "type": "instruction",
           "path": "instruction/understanding-embeddings-and-vector-search/understanding-embeddings-and-vector-search.md",
           "id": "ddd8c087-3b90-4385-8def-19cc8fc73414",
-          "state": "stub",
+          "state": "published",
           "description": "How text is converted into numerical vectors and efficiently searched for semantic similarity."
         },
         {
