@@ -473,7 +473,7 @@
           "type": "instruction",
           "path": "instruction/chain-of-thought-cot-prompting/chain-of-thought-cot-prompting.md",
           "id": "a16133b7-820f-4f9f-b380-8ff87a4a31a1",
-          "state": "stub",
+          "state": "published",
           "description": "Techniques for guiding LLMs to generate intermediate reasoning steps."
         },
         {
