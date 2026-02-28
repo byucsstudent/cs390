@@ -87,7 +87,7 @@ Agents extend their capabilities beyond mere text generation by interacting with
 Pretend that you are the LLM. Take the following prompt and come up with a plan to resolve it. Then create an ordered list that breaks the plan into intermediate steps, define actions for each step, and define what you would observe to validate the success of the actions.
 
    _Prompt_:
-   I want to give bonuses to each of my employees. I want it to be fair based upon past performance, but also to server as an incentive for future effort and loyalty.
+   I want to give bonuses to each of my employees. I want it to be fair based upon past performance, but also to serve as an incentive for future effort and loyalty.
 ```
 
 ## Orchestration Frameworks: Building Agentic Workflows
