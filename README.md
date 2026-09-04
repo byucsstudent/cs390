@@ -1,8 +1,5 @@
-![BYU Logo](https://raw.githubusercontent.com/csinstructiontemplate/emptycourse/refs/heads/main/byulogo.png)
- 
- 
+
 # Agentic Programming
-![Course Cover](https://raw.githubusercontent.com/csinstructiontemplate/emptycourse/refs/heads/main/cover.jpg)
 
 Welcome to the cutting edge of software development! This course is your gateway to "Agentic Programming," a revolutionary paradigm that's transforming how we build intelligent systems. Forget rigid scripts; we're stepping into a world where software doesn't just execute commands, but thinks, reasons, and autonomously pursues high-level goals using the incredible power of Large Language Models (LLMs).
 
