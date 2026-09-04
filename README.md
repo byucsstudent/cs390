@@ -1,9 +1,11 @@
-
+![cover.jpg](cover.jpg)
 # Agentic Programming
 
 Welcome to the cutting edge of software development! This course is your gateway to "Agentic Programming," a revolutionary paradigm that's transforming how we build intelligent systems. Forget rigid scripts; we're stepping into a world where software doesn't just execute commands, but thinks, reasons, and autonomously pursues high-level goals using the incredible power of Large Language Models (LLMs).
 
 In this journey, you'll discover the secrets behind creating self-correcting, dynamic applications. We'll unravel the core architecture of Agentic Programming, focusing on the iterative loop of planning, acting, and observing that drives these intelligent systems. You'll master the art of prompt engineering, leveraging advanced techniques like Chain-of-Thought and ReAct to guide LLMs as powerful reasoning engines. We'll also dive deep into how agents interact with the world through tools, how they remember information with Retrieval-Augmented Generation (RAG), and how specialized agents can collaborate to achieve complex objectives.
+
+![cover-1.jpg](cover-1.jpg)
 
 By the end of this course, you won't just understand the theory; you'll be building sophisticated agentic systems from the ground up using leading frameworks like LangGraph and CrewAI. Get ready to orchestrate intelligent workflows, empower agents to execute code, and refine their own outputs until your objectives are met. This is where the future of software takes flight, and you're invited to be a pilot!
 
