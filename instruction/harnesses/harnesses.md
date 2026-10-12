@@ -33,6 +33,90 @@ When you initialize Claude Code in a directory, you aren't just opening a chat; 
 
 By using Claude Code, you are essentially operating a "Lead Engineer" agent. This agent can then use other tools (via MCP) to act as a "crew," pulling in data from specialized servers to complete tasks that go beyond mere text generation.
 
+
+## Orchestrating Agentic Crews with Claude Code
+
+In complex software development, a single agent attempting to handle requirements gathering, implementation, testing, and refactoring simultaneously can suffer from "context drift" or overlook critical edge cases. The **Agentic Crew** pattern solves this by decomposing a large problem into specialized roles. Instead of asking one agent to "build the feature," you orchestrate a sequence of specialized prompts—or even separate Claude Code sessions—where each step focuses on a distinct responsibility.
+
+By assigning Claude specific personas, you force the model to prioritize different heuristics. For example, a "QA Auditor" persona will proactively look for ways to break code, whereas a "Refactor Specialist" focuses on cyclomatic complexity and DRY (Don't Repeat Yourself) principles.
+
+### The Multi-Agent Workflow
+
+When operating a crew, the output of one agent serves as the constraints or input for the next. This creates a "defense in depth" strategy for code quality. A typical multi-agent lifecycle in Claude Code looks like this:
+
+1.  **The Spec Verifier:** Validates the user's request against existing documentation and identifies ambiguities.
+2.  **The Developer:** Implements the core logic based on the verified spec.
+3.  **The Test Engineer:** Writes a comprehensive test suite (Unit and Integration).
+4.  **The Regression Tester:** Runs the new tests against the existing codebase to ensure no breaking changes.
+5.  **The Refactorer:** Cleans up the code for readability and performance without changing behavior.
+
+```mermaid
+%%{init: { 'theme': 'neutral', 'themeVariables': { 'mainBkg': '#ffffff', 'lineColor': '#000000', 'primaryTextColor': '#000000', 'actorBorder': '#000000', 'participantBorder': '#000000', 'noteBorderColor': '#000000' } }}%%
+graph TD
+    A[User Requirement] --> B(Spec Verifier)
+    B --> C{Spec Valid?}
+    C -- No --> B
+    C -- Yes --> D(Lead Developer)
+    D --> E(Test Engineer)
+    E --> F(Regression Tester)
+    F --> G{Passes All?}
+    G -- No --> D
+    G -- Yes --> H(Refactor Specialist)
+    H --> I[Final Pull Request]
+```
+
+### Implementing the Crew Pattern
+
+You can simulate a crew within Claude Code by using targeted instructions or by running specialized CLI commands. Here is how you might invoke different "members" of your crew for a specific task, such as adding a new authentication endpoint.
+
+#### 1. The Spec Verifier
+Start by ensuring the requirements are sound before a single line of code is written.
+```bash
+claude "Review the proposed 'OAuth2' feature in requirements.md. 
+Cross-reference it with our existing auth-service.ts. 
+Identify any conflicting logic or missing security headers."
+```
+
+#### 2. The Test Engineer (Test-Driven Development)
+Before the implementation, have an agent write the "specification" in the form of failing tests.
+```bash
+claude "Act as a Senior Test Engineer. Based on the verified OAuth2 spec, 
+write Vitest unit tests in src/auth/__tests__/oauth.spec.ts. 
+The tests should fail currently as the implementation does not exist."
+```
+
+#### 3. The Developer
+The developer is now constrained by the tests written by the previous agent.
+```bash
+claude "Act as a Full-Stack Developer. Implement the OAuth2 logic in 
+src/auth/oauth.ts so that all tests in oauth.spec.ts pass. 
+Do not modify the tests."
+```
+
+#### 4. The Refactor Specialist
+Finally, once the tests pass, bring in an agent focused solely on code health.
+```bash
+claude "Act as a Refactor Specialist. Review the new oauth.ts file. 
+Simplify the nested conditionals and ensure it follows our 
+internal style guide. The code must still pass all existing tests."
+```
+
+### Benefits of the Crew Approach
+*   **Reduced Hallucination:** Agents are more accurate when their scope is narrow.
+*   **Separation of Concerns:** The Developer isn't biased by trying to make their own tests pass; the Test Engineer sets the bar independently.
+*   **Improved Audit Trails:** Each stage of the "crew" provides a clear checkpoint where a human can intervene or provide feedback.
+
+```masteryls
+{"id":"976202a5-9b5f-4154-ab30-921618517c1a","title":"Benefits of Multi-Agent Crews","type":"multiple-choice"}
+Why is it beneficial to use a 'Test Engineer' agent separately from a 'Developer' agent when using Claude Code?
+
+- [ ] It allows the Developer agent to run faster by ignoring testing requirements.
+- [x] It prevents bias where the developer might write tests that only cover the specific paths they implemented.
+- [ ] Claude Code cannot write tests and code in the same session.
+- [ ] It reduces the cost of the API by using fewer tokens in the long run.
+```
+
+
 ## Operating as a Crew with MCP
 
 The Model Context Protocol (MCP) is the glue that allows a harness to expand its crew. If Claude Code is the orchestrator, MCP servers are the specialized team members. For example, you can connect Claude Code to a Google Maps MCP server, a Slack MCP server, and a Postgres MCP server simultaneously.
