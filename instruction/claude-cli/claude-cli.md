@@ -164,6 +164,100 @@ Where does the Claude CLI primarily store the context and session history betwee
 - [ ] Context is lost the moment the terminal process is terminated.
 ```
 
+
+## Configuring Project Behavior with AGENTS.md
+
+The Claude CLI (specifically the agentic developer preview, often referred to as "Claude Code") relies on project-specific context to provide accurate code generation and refactoring. While the CLI has built-in capabilities, the `AGENTS.md` file serves as a persistent "Manual of Operations" for Claude. By placing this file in your project's root directory, you define the persona, rules, and technical constraints that Claude must follow whenever it is active in that specific workspace.
+
+Think of `AGENTS.md` as the bridge between your project’s unique architecture and Claude's general intelligence. Without it, Claude might suggest libraries you don't use or follow coding patterns that contradict your team's style guide. With it, the CLI becomes a specialized contributor who understands your stack, your testing preferences, and your deployment constraints.
+
+### The Structure of an Effective AGENTS.md
+
+A successful `AGENTS.md` file is structured into clear, thematic sections. While the CLI is flexible, using a standardized format ensures that the model correctly parses your instructions.
+
+*   **Identity & Goal:** Defines who the agent is (e.g., "Senior Full-Stack Engineer") and its primary mission within the repo.
+*   **Tech Stack Context:** Explicitly lists versions of frameworks, databases, and key dependencies.
+*   **Coding Standards:** Rules for naming conventions, file structure, and error handling.
+*   **Testing Protocols:** Instructions on which testing framework to use and the requirement for coverage.
+*   **Forbidden Patterns:** Actions or libraries the agent should never use.
+
+### Information Flow in Claude CLI
+
+When you initialize the Claude CLI within a directory, it performs a lookup for configuration files to set the "System Prompt" for the session.
+
+```mermaid
+%%{init: { 'theme': 'neutral', 'themeVariables': { 'mainBkg': '#ffffff', 'lineColor': '#000000', 'primaryTextColor': '#000000', 'actorBorder': '#000000', 'participantBorder': '#000000', 'noteBorderColor': '#000000' } }}%%
+graph TD
+    A[Start Claude CLI] --> B{Search Root Directory}
+    B -- Found AGENTS.md --> C[Parse Project Instructions]
+    B -- Not Found --> D[Use Default CLI Persona]
+    C --> E[Initialize Agentic Session]
+    D --> E
+    E --> F[Process User Commands]
+    F --> G[Execute File Operations/Shell Commands]
+```
+
+### Working Tutorial: Creating a Custom Agent
+
+Follow these steps to set up an `AGENTS.md` file for a specialized React/TypeScript project. This ensures Claude doesn't accidentally use Class components or vanilla JavaScript.
+
+1.  **Navigate to your project root:**
+    ```bash
+    cd my-typescript-app
+    ```
+
+2.  **Create the file:**
+    ```bash
+    touch AGENTS.md
+    ```
+
+3.  **Populate with instructions:**
+    Open the file in your editor and add the following content:
+
+```markdown
+# Project Agent: Frontend Architect
+
+You are a specialized agent for the 'My-TypeScript-App' repository. Your goal is to maintain a high-performance React frontend.
+
+## Technical Constraints
+- **Framework:** React 18 with Vite.
+- **Language:** TypeScript (Strict mode enabled).
+- **Styling:** Tailwind CSS only. No CSS-in-JS.
+- **State Management:** TanStack Query for server state; Zustand for local state.
+
+## Rules of Engagement
+- Always use functional components and hooks.
+- Prefer `interface` over `type` for public API definitions.
+- When creating a new component, always create a corresponding `.test.tsx` file using Vitest.
+- Do NOT use the `any` keyword; if a type is unknown, use `unknown`.
+
+## Workflow
+1. Before writing code, analyze the existing component tree.
+2. If a requested change affects more than 3 files, provide a plan first.
+```
+
+4.  **Verify the context:**
+    Start your CLI session and ask Claude to describe its role:
+    ```bash
+    claude "What are your instructions for this project?"
+    ```
+    Claude should respond by summarizing the "Frontend Architect" persona and the constraints you defined.
+
+### Best Practices for Maintenance
+
+To get the most out of `AGENTS.md`, keep your instructions "lean." Overloading the file with hundreds of lines of documentation can dilute the importance of specific rules. Instead, link to other local documentation files (like `README.md` or `CONTRIBUTING.md`) that the agent can read if it needs more detail. Additionally, version control your `AGENTS.md` so that every developer on your team benefits from the same agentic behavior when they run the CLI locally.
+
+```masteryls
+{"id":"617f59d0-1bde-4a0e-ab47-ace165b114bb","title":"The Purpose of AGENTS.md","type":"multiple-choice"}
+What is the primary benefit of including an AGENTS.md file in your project's root directory when using the Claude CLI?
+
+- [ ] It serves as a replacement for the package.json file to manage dependencies.
+- [x] It provides project-specific context and persistent instructions that define how the agent should behave and write code.
+- [ ] It is a required file for the CLI to connect to the internet.
+- [ ] It acts as a log file that records every command executed by the CLI for auditing purposes.
+```
+
+
 ## Practical Tutorial: Guided Code Exploration
 
 One of the most powerful ways to use the Claude CLI is for "onboarding" yourself to a new or complex codebase. Instead of manually clicking through folders, you can ask the CLI to explain the architecture.
@@ -183,18 +277,21 @@ If you have a failing test, you can delegate the debugging process:
 2.  **The Process**: Claude will run the test command (e.g., `npm test`), capture the stack trace, search the codebase for the relevant function definitions, and apply a fix.
 3.  **The Review**: Before finalizing, Claude will show you a diff of the changes. You can then ask it to run the tests again to verify the fix.
 
-## Best Practices for Agentic Interaction
+## Best Practices for Claude Code
 
-Using a CLI agent requires a different mindset than using a standard chatbot. Because the agent has "agency" over your files, clarity and constraints are vital.
+Using Claude Code requires a shift from "chatting" to "collaborating." Because the agent has agency over your local environment, clarity and session management are vital for success.
 
-**Be Specific with Scope**
-While Claude can search your whole project, providing a starting point saves tokens and time. Use prompts like: "Focus only on the components in the `/src/ui` directory."
+**Manage Context with Precision**
+Claude Code indexes your files, but you should guide its focus to save tokens and time. Use specific file paths in your prompts, such as "Refactor the hooks in `/src/hooks/useAuth.ts`." Additionally, ensure your `.claudeignore` file is strictly configured to prevent the agent from indexing unnecessary directories like `node_modules` or `dist`.
 
-**Iterative Refinement**
-Don't expect the agent to solve a massive architectural migration in one go. Break large tasks into smaller instructions. For example, instead of "Migrate the whole app to Tailwind," start with "Convert the Button component to use Tailwind CSS."
+**Utilize the Loop for Verification**
+One of the greatest strengths of Claude Code is its ability to see terminal output. Don't just ask it to write code; ask it to prove the code works. Use commands like: "Fix the type error in `utils.ts` and run `npm run build` to verify." This allows Claude to self-correct if the initial fix causes a regression.
 
-**Leverage Git Integration**
-Always start your Claude sessions on a clean git branch. This allows you to use `git diff` to inspect every single character the agent changed. Claude CLI is specifically designed to work with git, often suggesting commit messages for the changes it makes.
+**Maintain Session Hygiene**
+Long-running sessions can fill the context window, making Claude slower or less accurate. Use the `/compact` command to summarize the conversation history when you reach a milestone. If you are switching to a completely different task within the same repo, use `/clear` to start with a fresh context.
+
+**Leverage Git and `/undo` for Safety**
+Always run Claude Code on a clean Git branch. This provides a clear audit trail of the agent's changes via `git diff`. If Claude makes a complex series of changes that don't work, use the `/undo` command to instantly revert the file system to the state before the last agent action.
 
 ## Challenges and Solutions
 
