@@ -1,5 +1,5 @@
 {
-  "title": "Agentic Programming",
+  "title": "Agent Programming",
   "links": {},
   "modules": [
     {
@@ -14,8 +14,7 @@
           "interactions": [
             "e1055f7d-a4c4-4cf4-8a28-7b65461307db"
           ],
-          "description": "Course introduction, objectives, and a high-level overview of agentic programming.",
-          "commit": "fd2475250c318c36d8fcfcb92a36124aad5305c8"
+          "description": "Course introduction, objectives, and a high-level overview of agentic programming."
         },
         {
           "title": "What is Agentic Programming?",
@@ -28,8 +27,7 @@
             "4027bfe7-a7cb-48ec-afc2-215f0c25b8cb",
             "732d1dd9-fbae-4308-a03e-54dc0f5e670b"
           ],
-          "description": "Defining agentic programming and its role in modern software development.",
-          "commit": "886734c9523f47fc1be5638a82fe0dfbd6dea5b4"
+          "description": "Defining agentic programming and its role in modern software development."
         },
         {
           "title": "Traditional Programming vs. Agentic Paradigms",
@@ -81,8 +79,7 @@
             "0b513fd3-7646-4d74-b258-5f778ff465b0",
             "7a45e114-8751-420e-8f7f-edf70fe6414f"
           ],
-          "description": "Reviewing diverse real-world applications where agentic programming excels. Include VSCode Copilot as example. Discuss its architecture in detail.",
-          "commit": "13120ec257da8cb4374e70e37bd9b2bacd0c474a"
+          "description": "Reviewing diverse real-world applications where agentic programming excels. Include VSCode Copilot as example. Discuss its architecture in detail."
         },
         {
           "title": "Ethical Considerations in Agentic Systems",
@@ -131,8 +128,7 @@
             "800f8f55-2c94-4d3d-8180-c5b8ae3b894f",
             "6a9ffea5-62a5-4126-977a-4ee569a435f8"
           ],
-          "description": "Exploring the architecture and capabilities of LLMs that make them suitable for agentic tasks.",
-          "commit": "5debb1cf0e93b017b27dda27b84cd67d317aa8d4"
+          "description": "Exploring the architecture and capabilities of LLMs that make them suitable for agentic tasks."
         },
         {
           "title": "The Role of LLMs in Agentic Systems",
@@ -161,8 +157,7 @@
             "abb88c1a-387e-46da-8044-3bbe118e0437",
             "46cc32f0-a81f-4f2e-a44e-9498bcc833aa"
           ],
-          "description": "Under the module of LLMs as reasoning engines and prompt engineering. Create a top that covers fundamental methods for constructing prompts, including clear instructions and role-playing.",
-          "commit": "8b16a3c9c322148e43b658d42acc84077be58661"
+          "description": "Under the module of LLMs as reasoning engines and prompt engineering. Create a top that covers fundamental methods for constructing prompts, including clear instructions and role-playing."
         },
         {
           "title": "Few-Shot Prompting",
@@ -174,8 +169,7 @@
             "d4cf64c1-9dbd-4285-9d44-2c5501a46f22",
             "83cd2600-a08a-4635-9b58-cdc53f4c90db"
           ],
-          "description": "Leveraging examples within prompts to teach LLMs new tasks or output formats.\n\n`Context`: in a module named LLMs as reasoning engines & prompt engineering fundementatals. Following a topic on basic prompting techniques. ",
-          "commit": "1b4ce2391e59c845fda13b97baed8a9209573e57"
+          "description": "Leveraging examples within prompts to teach LLMs new tasks or output formats.\n\n`Context`: in a module named LLMs as reasoning engines & prompt engineering fundementatals. Following a topic on basic prompting techniques. "
         },
         {
           "title": "Zero-Shot Prompting",
@@ -186,8 +180,7 @@
           "interactions": [
             "fa2fcc4f-0515-4e39-b56d-d2318fd94ad4"
           ],
-          "description": "Techniques for getting LLMs to perform tasks without explicit examples.",
-          "commit": "790cdf7b27d9bf3dabf4aca489a03cba16469eb2"
+          "description": "Techniques for getting LLMs to perform tasks without explicit examples."
         },
         {
           "title": "Temperature and Top-P: Controlling Creativity",
@@ -337,6 +330,13 @@
           "id": "1be949e2-c4f2-4e13-b865-38cd1132b471",
           "state": "stub",
           "description": "A practical exercise to implement an agent capable of using one external tool."
+        },
+        {
+          "title": "Claude CLI",
+          "type": "instruction",
+          "path": "instruction/claude-cli/claude-cli.md",
+          "id": "f291b7a0-5c5e-41cf-b466-1aadb300af50",
+          "description": "Describe what Claude CLI is, how to install it, best practices for using it, give working tutorials as examples"
         }
       ]
     },
