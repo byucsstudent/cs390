@@ -349,6 +349,10 @@
           "type": "instruction",
           "path": "instruction/harnesses/harnesses.md",
           "id": "32f6c4c7-94df-46a6-b29c-ae6db30d248c",
+          "state": "published",
+          "interactions": [
+            "976202a5-9b5f-4154-ab30-921618517c1a"
+          ],
           "description": "Introduce the idea of allowing multiple agents to operate on a problem as part of a crew. Give examples of how to do this using Claude Code"
         }
       ]
