@@ -33,6 +33,137 @@ npm install -g @anthropic-ai/claude-code
 
 Once installed, you can launch the interface by typing `claude` in your terminal. On the first run, the tool will guide you through an authentication process via your Anthropic Console account. You will need a valid API key with sufficient credits or a billing plan, as the CLI consumes tokens for both reasoning and the context provided by your files.
 
+
+## Essential Commands for Claude Code
+
+Claude Code is an agentic CLI tool that allows you to interact with your codebase using natural language. While much of your interaction will involve simply describing what you want to achieve, the CLI provides a suite of "slash commands" and flags to manage the session, optimize token usage, and control how Claude interacts with your files.
+
+### Starting the Session
+The primary entry point is the `claude` command. When executed in a terminal within your project directory, it initializes the environment and indexes your files (respecting your `.gitignore`).
+
+*   `claude`: Starts an interactive session.
+*   `claude "your prompt"`: Executes a one-off task and exits.
+*   `claude --danger`: Runs Claude in a mode that skips certain confirmation prompts for file writes (use with caution).
+*   `claude config`: Opens the configuration menu to manage API keys, themes, and model settings.
+
+### Interactive Slash Commands
+Once inside the Claude Code shell, you can use specialized commands to manage the state of the conversation. These are prefixed with a forward slash (`/`).
+
+| Command | Purpose |
+| :--- | :--- |
+| `/compact` | Compresses the conversation history to save on context window tokens while preserving key information. |
+| `/undo` | Reverts the last set of changes made to the file system. |
+| `/review` | Asks Claude to review the current changes or a specific file for potential bugs or style issues. |
+| `/test` | Prompts Claude to generate or run tests for the current context. |
+| `/clear` | Clears the current conversation history to start fresh without restarting the CLI. |
+| `/help` | Displays a list of all available commands and their descriptions. |
+
+### Practical Examples
+
+**Example 1: Fixing a Bug**
+If you have a known error in a React component, you can pipe the error log or simply describe it:
+```bash
+claude "I'm seeing a hydration error in Navbar.tsx, please fix it and run 'npm test'"
+```
+
+**Example 2: Managing Token Usage**
+In long-running sessions, your "Context Window" can fill up, making responses slower or more expensive. Use the compact command regularly:
+```text
+Claude> /compact
+# Claude will summarize the history and reduce the token count.
+```
+
+**Example 3: Undoing Mistakes**
+If Claude suggests a refactor that breaks your build, you don't need to manually revert files via Git:
+```text
+Claude> /undo
+# Claude reverts the last file changes it made during this session.
+```
+
+```masteryls
+{"id":"28874792-5452-41a2-b0b4-489ca40aadd4","title":"Identifying Claude CLI Commands","type":"multiple-choice"}
+Which slash command should you use if you want to revert the most recent file changes made by Claude during an interactive session?
+
+- [ ] `/clear`
+- [ ] `/compact`
+- [x] `/undo`
+- [ ] `/reset`
+```
+
+
+## Persisting Context and Session Management
+
+Claude Code (the Claude CLI) is designed to function as a persistent stateful agent rather than a stateless prompt. When you initiate a session in a repository, Claude builds a mental model of your project structure, tracks your conversation history, and maintains a record of the changes it has proposed. This context is what allows Claude to understand complex instructions like "Fix the bug we discussed earlier in the utility file" without you needing to provide the file path again.
+
+The CLI stores session data locally on your machine, typically within a hidden directory (e.g., `~/.claude/` or your OS-equivalent application data folder). This data includes the message history, tool execution results, and metadata about the files Claude has indexed. By persisting this context, Claude can resume a task exactly where it left off, even after you close your terminal or restart your computer.
+
+### How Session Persistence Works
+
+The following diagram illustrates the lifecycle of a Claude Code session and how the CLI interacts with the local state to maintain continuity.
+
+```mermaid
+%%{init: { 'theme': 'neutral', 'themeVariables': { 'mainBkg': '#ffffff', 'lineColor': '#000000', 'primaryTextColor': '#000000', 'actorBorder': '#000000', 'participantBorder': '#000000', 'noteBorderColor': '#000000' } }}%%
+graph TD
+    A[Start 'claude' in Terminal] --> B{Session Exists?}
+    B -- No --> C[Initialize New Session State]
+    B -- Yes --> D[Load Previous History & Context]
+    C --> E[Index Files & User Prompt]
+    D --> E
+    E --> F[Claude Processes Task]
+    F --> G[Save Incremental State]
+    G --> H[User Exits CLI]
+    H --> I[Context Persisted to Local Storage]
+```
+
+### Best Practices for Context Management
+
+To ensure Claude remains performant and accurate during long-running projects, follow these best practices for managing your session context:
+
+1.  **Use `.claudeignore`**: Just like a `.gitignore` file, a `.claudeignore` file prevents the CLI from indexing unnecessary files (like `node_modules`, build artifacts, or large binaries). This keeps the "context window" clean and focused on your source code.
+2.  **Clear Sessions Periodically**: If a session becomes too long, the context window may become saturated, leading to slower response times or decreased reasoning accuracy. You can start fresh by using specific flags or clearing the local cache.
+3.  **Explicit File Mentioning**: Even though Claude tracks context, if you are working on a massive monorepo, explicitly mentioning the file you are interested in helps Claude prioritize that specific piece of context over others.
+
+### Tutorial: Managing and Resuming Sessions
+
+To effectively use session persistence, you should know how to start, resume, and manage your CLI environment.
+
+**1. Starting a Session in a Specific Project**
+Navigate to your project root and launch the CLI. Claude will detect the git root and begin building context.
+```bash
+cd ~/projects/my-web-app
+claude
+```
+
+**2. Implementing a `.claudeignore`**
+Create a file to prevent Claude from getting "distracted" by large logs or dependencies.
+```text
+# .claudeignore
+node_modules/
+dist/
+*.log
+.env
+```
+
+**3. Resuming Work**
+If you exit the terminal and return later, simply running `claude` in the same directory will often prompt you or automatically reload the previous session state, allowing you to continue the conversation.
+
+**4. Clearing State**
+If you want to wipe the history and start with a "blank slate" for the project:
+```bash
+# Example of clearing session history (check specific CLI version help for exact command)
+claude --clear
+```
+
+```masteryls
+{"id":"b65e1ea5-4ff8-4d8f-b02c-e02e63895ae0","title":"Understanding CLI Persistence","type":"multiple-choice"}
+Where does the Claude CLI primarily store the context and session history between interactions?
+
+- [ ] It sends all history to the Anthropic cloud, and nothing is stored locally.
+- [x] It stores session state in a local directory on your machine (e.g., ~/.claude/).
+- [ ] It creates a hidden 'claude.log' file in every folder you visit.
+- [ ] Context is lost the moment the terminal process is terminated.
+```
+
 ## Practical Tutorial: Guided Code Exploration
 
 One of the most powerful ways to use the Claude CLI is for "onboarding" yourself to a new or complex codebase. Instead of manually clicking through folders, you can ask the CLI to explain the architecture.
