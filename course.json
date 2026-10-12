@@ -338,7 +338,8 @@
           "id": "f291b7a0-5c5e-41cf-b466-1aadb300af50",
           "interactions": [
             "28874792-5452-41a2-b0b4-489ca40aadd4",
-            "b65e1ea5-4ff8-4d8f-b02c-e02e63895ae0"
+            "b65e1ea5-4ff8-4d8f-b02c-e02e63895ae0",
+            "617f59d0-1bde-4a0e-ab47-ace165b114bb"
           ],
           "description": "Describe what Claude CLI is, how to install it, best practices for using it, give working tutorials as examples"
         }
