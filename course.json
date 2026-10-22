@@ -354,6 +354,13 @@
             "976202a5-9b5f-4154-ab30-921618517c1a"
           ],
           "description": "Introduce the idea of allowing multiple agents to operate on a problem as part of a crew. Give examples of how to do this using Claude Code"
+        },
+        {
+          "title": "Claude crew",
+          "type": "instruction",
+          "path": "instruction/claude-crew/claude-crew.md",
+          "id": "bd2852bf-f75d-4718-95e9-2fa16e6b9faf",
+          "description": "Using the Claude cli walk the the creation of a harness that can be used to design, create, enhance, and maintain a complex website. Provide the code as a working example for creating and using the harness. Then have a demonstration of using the harness to create a website that rates professors in a way that is honest, open, and balanced. "
         }
       ]
     },
