@@ -377,6 +377,13 @@
           "path": "instruction/transformers/transformers.md",
           "id": "2f02f8fc-8d5b-4ef0-8f09-f7d384cb18d1",
           "description": "Describe how LLM transformers work and how they differ from RNNs."
+        },
+        {
+          "title": "Jev Tutorial",
+          "type": "instruction",
+          "path": "instruction/jev-tutorial/jev-tutorial.md",
+          "id": "7427b6ce-fc28-4899-b37c-7dd8e8dfcd1c",
+          "description": "Create a tutorial about how to use typesafe.ai's api to execute queries agains their jev models using javascript"
         }
       ]
     },
