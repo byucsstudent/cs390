@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+>
+> AI is really struggling here. I think it is making most of this up, or trying to force it into a `typesafety` representation. Perhaps this content is just too new
+
 # Jev Tutorial
 
 In the realm of agentic programming, the ability to transition from unstructured natural language to structured, reliable data is paramount. While Large Language Models (LLMs) are exceptionally good at generating text, they often struggle to maintain strict formatting requirements necessary for programmatic integration. This is where **Typesafe.ai** and its **Jev** models come into play. Jev provides a framework for executing queries against models that are constrained by specific types, ensuring that the output you receive is not just a guess, but a validated structure that your JavaScript applications can use immediately without complex parsing logic.
