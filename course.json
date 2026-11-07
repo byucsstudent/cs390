@@ -364,11 +364,11 @@
           "description": "Using the Claude cli walk the the creation of a harness that can be used to design, create, enhance, and maintain a complex website. Provide the code as a working example for creating and using the harness. Then have a demonstration of using the harness to create a website that rates professors in a way that is honest, open, and balanced. "
         },
         {
-          "title": "Setting up your dev environment",
+          "title": "Typesafe ai",
           "type": "instruction",
-          "path": "instruction/setting-up-your-dev-environment/setting-up-your-dev-environment.md",
-          "id": "c9df2aa5-df42-4736-a69e-ce5ebd0dec12",
-          "description": "How to set up a dev environment that uses Claude code. Cover configuration. Portability of the configuration. Storing updating and compacting context. Using skills. Using mcp. Executing multiple agents. Coordinating work between agents. Verifying correctness"
+          "path": "instruction/typesafe-ai/typesafe-ai.md",
+          "id": "fbddc085-37cb-4acd-bacc-7a8beece3ca6",
+          "description": "What is it how does it work and differ from traditional llms"
         }
       ]
     },
