@@ -368,7 +368,15 @@
           "type": "instruction",
           "path": "instruction/typesafe-ai/typesafe-ai.md",
           "id": "fbddc085-37cb-4acd-bacc-7a8beece3ca6",
+          "state": "published",
           "description": "What is it how does it work and differ from traditional llms"
+        },
+        {
+          "title": "Transformers",
+          "type": "instruction",
+          "path": "instruction/transformers/transformers.md",
+          "id": "2f02f8fc-8d5b-4ef0-8f09-f7d384cb18d1",
+          "description": "Describe how LLM transformers work and how they differ from RNNs."
         }
       ]
     },
