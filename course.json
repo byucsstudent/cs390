@@ -125,6 +125,10 @@
           "type": "instruction",
           "path": "instruction/what-is-science/what-is-science.md",
           "id": "98d2d368-d7dc-4765-8e69-8fade8728ec4",
+          "interactions": [
+            "59f25a5e-064e-42d5-b67a-3bd5244882c4",
+            "3f480cf1-f69a-47e4-bf52-601d61267cb4"
+          ],
           "description": "Science is the disciplined process of using systematic observations and measurements to evaluate explanations, while making the methods and uncertainty open to scrutiny."
         }
       ]
