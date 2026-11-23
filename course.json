@@ -119,6 +119,13 @@
           "path": "instruction/what-is-computer-science/what-is-computer-science.md",
           "id": "61bd87d5-3633-49bb-9c04-7cc221414ad0",
           "description": "A physical computer is the material device that carries out computation. Its circuits change electrical states in ways that implement instructions. But using one to accomplish a task doesn’t, by itself, make the task scientific—just as using a microscope doesn’t make every activity involving it science.\n\nComputer science includes several kinds of work:\n- Formal theory: proving that an algorithm gives the right answer or determining what problems can be computed. These results come from mathematical reasoning, not measurement.\n- Empirical research: measuring how algorithms or systems perform, testing how people use software, or investigating reliability and security.\n- Engineering: designing and building hardware or software that works under real constraints such as speed, cost, and power.\nFor example, a proof can show that a sorting algorithm correctly orders a list. Benchmarks can measure how quickly it runs on a particular computer. Building a program that uses it to organize student grades is an application of computing.\n\nSo the physical device connects abstract computation to the world: it makes a procedure happen. Computer science studies computation in formal and empirical ways, while building useful devices and programs is often engineering. Under your measurement-centered definition, some parts of computer science fit science directly, while theoretical parts fit more naturally under the formal sciences."
+        },
+        {
+          "title": "What is Science?",
+          "type": "instruction",
+          "path": "instruction/what-is-science/what-is-science.md",
+          "id": "98d2d368-d7dc-4765-8e69-8fade8728ec4",
+          "description": "Science is the disciplined process of using systematic observations and measurements to evaluate explanations, while making the methods and uncertainty open to scrutiny."
         }
       ]
     },
